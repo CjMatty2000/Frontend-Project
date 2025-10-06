@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password Page</title>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="icon" href="/assests/icon/favicon.svg">
+</head>
+<body>
+  <div class="main-container">
+    <!-- Left login image -->
+    <div class="left-section">
+      <img src="images/login.jpg" alt="Login Illustration">
+    </div>
+
+    <!-- Auth form -->
+    <div class="auth-container">
+      <div id="register-form" class="form-container">
+        <h2 class="form-title">Reset Password</h2>
+
+        <form id="resetForm">
+          <!-- Password -->
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="reset-password" class="sr-only">Password</label>
+            <input id="reset-password" type="password" placeholder="Password" minlength="8" class="form-input" required>
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="confirm-password" class="sr-only">Confirm Password</label>
+            <input id="confirm-password" type="password" placeholder="Confirm Password" minlength="8" class="form-input" required>
+          </div>
+
+          <button type="submit" class="auth-button">Change Password</button>
+        </form>
+
+        <!-- Go back to forget password page -->
+        <div class="go-back-container">
+          <p>Remembered your password? <a href="forget.html" class="link-text">Go back</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="script/firebase-config.js"></script>
+  <script src="script/reset.js" type="module"></script>
+</body>
+</html>
