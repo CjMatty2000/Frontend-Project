@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link rel="stylesheet" href="styles/forget.css">
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <link rel="icon" href="/assests/icon/favicon.svg">
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="left-section">
+      <img src="images/login.jpg" alt="Illustration">
+    </div>
+
+    <div class="auth-container">
+      <div id="register-form" class="form-container">
+        <h1 class="form-title">Registration</h1>
+
+        <form id="signupForm">
+          <div class="input-group">
+            <iconify-icon icon="entypo:email" width="20" height="20" class="input-icon"></iconify-icon>
+            <label for="signup-email" class="sr-only">Email Address</label>
+            <input id="signup-email" type="email" placeholder="Email Address" class="form-input" required autocomplete="email">
+          </div>
+
+          <!-- Password -->
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="signup-password" class="sr-only">Password</label>
+            <input id="signup-password" type="password" placeholder="Password" minlength="6" class="form-input" required autocomplete="new-password">
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="confirm-password" class="sr-only">Confirm Password</label>
+            <input id="confirm-password" type="password" placeholder="Confirm Password" minlength="8" class="form-input" required autocomplete="new-password">
+          </div>
+
+          <!-- Terms -->
+          <p class="terms-text">By signing up, you agree to the 
+            <a href="#" class="link-text">Terms of Use</a> and 
+            <a href="#" class="link-text">Privacy notice</a>.
+          </p>
+
+          <button type="submit" class="auth-button">Sign Up</button>
+        </form>
+
+        <p id="auth-message" class="auth-message" aria-live="polite"></p>
+
+        <!-- Already have an account? -->
+        <div class="signup-link-container">
+          <p>Already have an account? <a href="/index.html" class="link-text">Login</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script/firebase-config.js" type="module"></script>
+  <script src="script/register.js" type="module"></script>
+</body>
+</html>
