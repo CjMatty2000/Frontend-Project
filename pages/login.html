@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="icon" type="image/x-icon" href="../assets/icon/favicon.svg">
+  <!-- <link rel="stylesheet" href="../styles/login.css"> -->
+   <link rel="stylesheet" href="/styles/login.css">
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="login-page">
+    <img class="login-image" src="/Images/restaurant image.jpeg" alt="Login illustration">
+    <div class="login-form-container">
+      <h2>Welcome Back!</h2>
+
+      <form id="loginForm">
+        <div class="input-container">
+          <i class="fa-solid fa-at"><label for="email"></label></i>
+          <input type="email" id="email" name="email" placeholder="Email address">
+          <div class="error"></div>
+        </div>
+        
+        <div class="input-container">
+          <label for="password"><i class="fa-solid fa-lock"></i></label>
+          <input type="password" id="password" name="password" placeholder="Password">
+          <div class="error"></div>
+        </div>
+
+        <div class="forgot-password">
+          <a href="http://127.0.0.1:5500/pages/forgetpassword.html" class="password-change">Forgot Password?</a>
+        </div>
+
+        <div>
+          <button type="submit" class="login-form">login</button>
+        </div>
+
+        
+        <div class="seperator">
+          <span class="seperator-text">Or</span>
+        </div>
+
+        <div class="social-login">
+          <div class="google-login">
+            <i class="fa-brands fa-google"></i>
+            <a href="https://support.google.com/mail/answer/56256?hl=en">Google</a>
+          </div>
+
+          <div class="google-login">
+            <i class="fa-brands fa-facebook-f"></i>
+            <a href="https://www.facebook.com/">Facebook</a>
+          </div>
+        </div>
+
+        <p class="signup-text">
+          Don’t have an account? <a href="http://127.0.0.1:5500/pages/registration.html">Sign up</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="/script/login.js"></script>
+</body>
+</html>
