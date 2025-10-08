@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <link rel="stylesheet" href="../styles/order.css">
+    <link rel="icon" type="image/x-icon" href="../assests/icon/favicon.svg">
+     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+
+         <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+        <iconify-icon icon="mdi:menu" width="30" height="30"></iconify-icon>
+        </button>
+
+        <section class="icons-container">
+            <span>
+            <img src="../assests/icon/favicon.svg" alt="Restaurant logo">
+            </span>
+            <iconify-icon icon="ion:home" width="24" height="24" style = "color:#EA6D27 ;"></iconify-icon>
+            <iconify-icon icon="mage:dots-menu" width="24" height="24"></iconify-icon>
+            <iconify-icon icon="material-symbols-light:list-alt-rounded" width="24" height="24"></iconify-icon>
+            <iconify-icon icon="streamline:burger-solid" width="24" height="24"></iconify-icon>
+           <iconify-icon icon="ix:alarm-bell-filled" width="24" height="24"></iconify-icon>
+            <iconify-icon icon="bitcoin-icons:contacts-filled" width="24" height="24"></iconify-icon>
+            <iconify-icon icon="famicons:send-sharp" width="24" height="24"></iconify-icon>
+            <iconify-icon icon="weui:setting-filled" width="24" height="24"></iconify-icon>
+        </section>
+
+        <main class="main-container" id="main-container">
+
+        <section class="items-container" id="items-container">
+            <div class="search-engine">
+                <h1>Restaurant</h1>
+                <label>
+                <input type="search" placeholder="Search for any menu" autofocus id="cart-search">
+                <svg  id = "search-btn" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path fill="#fff" fill-rule="evenodd" d="M10.44 2.75a7.69 7.69 0 1 0 4.615 13.842c.058.17.154.329.29.464l3.84 3.84a1.21 1.21 0 0 0 1.71-1.712l-3.84-3.84a1.2 1.2 0 0 0-.463-.289A7.69 7.69 0 0 0 10.44 2.75m-5.75 7.69a5.75 5.75 0 1 1 11.5 0a5.75 5.75 0 0 1-11.5 0" clip-rule="evenodd"/></svg>
+                </label>
+              
+                <div class="cart-icon" id = "cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 48 48"><g fill="none"><path fill="rgba(255,0,0,0)" d="M24 47.996c13.255 0 24-10.745 24-24C48 10.743 37.255-.001 24-.001S0 10.742 0 23.997s10.745 23.999 24 23.999"/><path fill="#3e3e3f" d="M18.763 37.96a1.745 1.745 0 1 0 0-3.49a1.745 1.745 0 0 0 0 3.49m12.219 0a1.745 1.745 0 1 0 0-3.49a1.745 1.745 0 0 0 0 3.49"/><path fill="#EA6D27" d="M32.727 32.724H18.43l1.003-4.364h-1.542a1 1 0 0 1-.257-.04l-1.396 4.886a.872.872 0 0 0 .78 1.263h15.71a.873.873 0 1 0 0-1.746"/><path fill="#EA6D27" d="M37.778 15.606a.87.87 0 0 0-.687-.335H15.273q-.03.001-.06.006l-.84-2.836a.87.87 0 0 0-.846-.661h-2.618a.873.873 0 0 0 0 1.745h1.936L17.044 27.7a.87.87 0 0 0 .847.661H33.6a.9.9 0 0 0 .506-.165a.87.87 0 0 0 .34-.496l3.49-11.345a.87.87 0 0 0-.159-.749m-5.487 1.41v2.618h-2.618v-2.618zm.872 8.954v-1.972h.62zm0-2.845v-2.618h1.714l-.821 2.618zm-.872 0h-2.618v-2.618h2.618zm-15.528-2.618h1.564v2.618h-.789zm2.437 0h2.618v2.618H19.2zm3.49 0h2.619v2.618H22.69zm3.492 0H28.8v2.618h-2.618zm2.618-3.49v2.617h-2.618v-2.618zm-3.491 0v2.617H22.69v-2.618zm-3.491 0v2.617H19.2v-2.618zm-3.491 0v2.617h-1.823l-.775-2.618zm-.53 6.98h.53v1.791zm1.403 2.619v-2.618h2.618v2.618zm3.49 0v-2.618h2.619v2.618zm3.492 0v-2.618H28.8v2.618zm3.49 0v-2.618h2.619v2.618zm5.48-6.982h-1.989v-2.618h2.81z"/><path fill="#EA6D27" d="M11.781 14.397a1.745 1.745 0 1 0 0-3.49a1.745 1.745 0 0 0 0 3.49"/><path fill="#5b5c5f" d="M18.764 34.47a1.746 1.746 0 0 0-1.746 1.745c0 .503.216.953.557 1.272l2.461-2.46a1.74 1.74 0 0 0-1.273-.558m12.219.001a1.746 1.746 0 0 0-1.746 1.745c0 .503.217.953.558 1.272l2.46-2.46a1.74 1.74 0 0 0-1.272-.558"/></g>  
+                </svg>
+                <span class="count">0</span>
+                </div>
+            </div>
+            <div class="items-product">
+                <h1>Special Menu For You</h1>
+                <ul id="Mylist-items" class = "hidden"></ul>
+                <ul id="search-list" class="hidden"></ul>
+            </div>
+        </section>
+
+            <aside class="aside-container" id="aside-container">
+                <article>
+                 <span id = "hide-aside-container">X</span>
+                 </article>
+
+                <div class="cart-empty">
+                    <img src="../assests/icon/empty-box_17281534.png" alt="Empty Cart">
+                    <em>Your cart is empty</em>
+                </div>
+
+                <div class="cart-display  hidden">
+                     <ul class="cart-list"></ul>
+                    <section class="cart-total">
+                    <h3>Total Amount:</h3>
+                    <h3 class="total-amount">₦0.00</h3>
+                    </section>
+                    <button id="place-order">Place Order</button>
+                </div>
+                </aside>
+
+    </main>
+
+    </div>
+    
+    <script src="../script/order.js"></script>
+</body>
+</html>
