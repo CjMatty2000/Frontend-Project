@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website Project</title>
+    <script src="../script/invoice.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../assests/icon/favicon.svg">
+    <link rel="stylesheet" href="../styles/invoice.css">
+     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+</head>
+<body>
+    <main>
+        <section class="section-1">
+            <div class="div0"><img src="../assests/icon/favicon.svg" alt="image" id="picture-1"></div>
+            <hr>
+             <nav>
+                
+                <hr>
+                <iconify-icon icon="ion:home" width="24" height="24" style = "color:#EA6D27 ;" id="picture"></iconify-icon>
+                <iconify-icon icon="mage:dots-menu" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="material-symbols-light:list-alt-rounded" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="streamline:burger-solid" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="ix:alarm-bell-filled" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="bitcoin-icons:contacts-filled" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="famicons:send-sharp" width="24" height="24" id="picture"></iconify-icon>
+                <iconify-icon icon="weui:setting-filled" width="24" height="24" id="picture"></iconify-icon>
+            </nav>
+        </section>
+
+        <section class="section-2">
+            <div class="head">
+                <h1>orders#</h1>
+                <span class="material-symbols-light--menu-rounded"></span>
+            </div>
+            <div class="icon-place">
+                <section class="section-icon">
+                    <nav>
+                        <iconify-icon icon="ion:home" width="24" height="24" style = "color:#EA6D27 ;" id="picture"></iconify-icon>
+                        <iconify-icon icon="mage:dots-menu" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="material-symbols-light:list-alt-rounded" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="streamline:burger-solid" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="ix:alarm-bell-filled" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="bitcoin-icons:contacts-filled" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="famicons:send-sharp" width="24" height="24" id="picture"></iconify-icon>
+                        <iconify-icon icon="weui:setting-filled" width="24" height="24" id="picture"></iconify-icon>
+                    </nav>
+                </section>
+            </div>    
+            <section class="up">
+                <h3>orders</h3>
+                    <form action="">
+                    <div class="contain">
+                        <div class="div1">
+                        <label for="">Recipent:</label>
+                        <input type="text" placeholder="Enter Name" required class="Receipent-name">
+                        </div>
+
+                        <div class="div1">
+                        <label for="">Gender:</label>
+                        <input type="text" placeholder="Enter Gender" required  class="sex-type">
+                        </div>
+
+                        <div class="div1">
+                        <label for="">City:</label>
+                        <input type="text" placeholder="Enter City" required class="place">
+                        </div>
+
+                        <div class="div1">
+                        <label for="">Phone Number:</label>
+                        <input type="number" placeholder="Enter phone number" required class="phone-number">
+                        </div>
+
+                        <div class="div1">
+                        <label for="">Email Address:</label>
+                        <input type="email" placeholder="Enter Emai Address" required class="place-from">
+                        </div>
+
+                        <div class="div1">
+                        <label for="">Customer ID:</label>
+                        <input type="number" placeholder="Enter Customer ID" required class="customer-identification">
+                        </div>
+                    </div>    
+
+                        <div class="div1">
+                        <label for="" id="lel">Address</label>
+                        <textarea name="" id="" placeholder="Enter Address" class="text-place"></textarea>
+                        </div>
+                    </form>
+            </section>
+            <section class="down">
+                <section class="right">
+
+                    <div class="item">
+                        <div class="image-page">
+                            <img src="/Images/Esi_Ewu.jpeg" alt="image">
+                        </div>
+                        <div class="name">
+                            <p>Esi ewu</p>
+                        </div>
+                        <div class="price">
+                            <p>$6000</p>
+                        </div>
+                        <div class="quantity">
+                            <p>quantity:1</p>
+                        </div>
+                        <div class="remove">
+                            <span class="ic--outline-close"></span>
+                        </div>
+                    </div>
+
+
+                </section>
+                <section class="left">
+                    <div class="payment">
+                        <div class="total-price">
+                            <b>total</b>
+                            <p id="price1">$8000</p>
+                        </div>
+                        <div class="total-quantity">
+                            <b>quantity</b>
+                            <p id="quantity1">7</p>
+                        </div>
+                        <hr>
+                        <div class="btn-button">
+                            <div><button class="btn-1" onclick="display()">Print</button></div>
+                            <div><button class="btn-2" onclick="inputData()"><a href="/pages/successfullpage.html">Place Order</a></button></div>
+                        </div>
+                    <!-- my receipt -->
+                <div class="overlay">
+                    <div class="receipt">
+                            <h1>Receipt#</h1>
+                            <br>
+                            <hr>
+                            <div class="customer-name">
+                                <h2>Receipent</h2>
+                                <p class="receipt-name">Godwin chibuike</p>
+                            </div>
+                            <div class="id">
+                                <h2>Customer ID</h2>
+                                <p>6624356849</p>
+                            </div>
+                            <div class="date">
+                                <h2>Date</h2>
+                                <p>09-09-2025</p>
+                            </div>
+                            <br>
+                        <div class="term">
+                            <div class="item1">
+                                <h2 class="name">esi ewu</h2>
+                                <p class="quantity">4</p>
+                                <p class="price">$70000</p>
+                            </div>
+
+                        </div>
+                            <hr>
+                            <div class="last-total">
+                            <h2>Total</h2>
+                            <p class="total">$20000</p>
+                            </div>
+                            <br>
+                            <button><a href="/pages/printedinvoice.html">Print Invoice</a></button>
+                        </div>
+                    </div>  
+                </div>
+                </section>
+            </section>
+        </section>
+
+
+
+        
+    </main>
+
+</body>
+</html>
