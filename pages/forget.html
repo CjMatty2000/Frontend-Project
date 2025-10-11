@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forget Password Page</title>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="/styles/forget.css">
+    <link rel="icon" href="/assests/icon/favicon.svg">
+</head>
+<body>
+
+    <div class="main-container">
+            <div class="left-section">
+        <img src="/Images/login.jpg" alt="Illustration">
+</div>
+
+        <div class="auth-container">
+            <div id="register-form" class="form-container">
+                <h2 class="form-title">Forgot Password</h2>
+                <p class="form-sub-title">Please enter your email address below you will receive a verification link.
+                </p>
+         <form id="forgetForm">
+            <div class="input-group">
+                <iconify-icon icon="entypo:email" width="20" height="20" class="input-icon"></iconify-icon>
+                <label for="forget-email" class="sr-only">Email Address</label>
+                <input id="forget-email" type="email" placeholder="Email Address" class="form-input">
+</div>
+
+                    <button type="submit" class="auth-button">Continue</button>
+                </form>
+
+            <!-- Already have an account? -->
+                <div class="signup-link-container">
+                    <p>Remember your password? <a href="login.html" class="link-text">Login</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    <script src="/script/forget.js"></script>
+</body>
+</html>
