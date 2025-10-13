@@ -19,18 +19,57 @@ let customerId = document.querySelector(".customer-identification");
 let email = document.querySelector(".place-from");
 let textArea = document.querySelector(".text-place")
 
-let inputData = () => {
-    let newReciepiant = receipiant.value;
-    let genderPlace = Gender.value;
-    let cityPlace = city.value;
-    let phonePlace = phoneNumber.value;
-    let customerPlace = customerId.value;
-    let emailPlace = email.value;
-    let textPlace = textArea.value;
+let customerDetails = [];
 
-    nameItem.innerHTML = newReciepiant
+let addNametoHTML = () => {
+    nameItem.innerHTML = " ";
+    if(customerDetails.length > 0){
+        let latest = customerDetails[customerDetails.length -1]
+        let element = document.createElement("p");
+        element.classList.add("receipt-name");
+        element.textContent = latest.newReciepiant
+        nameItem.appendChild(element)
+    }
+ }
+let storage = () => {
+    localStorage.setItem("customerDetails", JSON.stringify(customerDetails))
+ }
+
+let putItems = () => {
+    if(receipiant.value && Gender.value && city.value && phoneNumber.value && customerId.value && email.value && textArea.value){
+        let obj = {
+    newReciepiant: receipiant.value,
+    genderPlace: Gender.value,
+    cityPlace: city.value,
+    phonePlace: phoneNumber.value,
+    customerPlace: customerId.value,
+    emailPlace: email.value,
+    textPlace: textArea.value
+    };
+
+
+    if(obj){
+        customerDetails.push(obj)
+        storage()
+        }
+         window.location.href = "/pages/successfullpage.html"
+    }else{
+        alert("please put your details")
+    }
+   
 }
-inputData()
+let recoverStorage = () => {
+    return JSON.parse(localStorage.getItem("customerDetails"))||[]
+    
+}
+customerDetails = recoverStorage();
+addNametoHTML()
+console.log(customerDetails)
+
+
+
+
+
 
 function display(){
     overlay1.forEach($term => {

@@ -16,7 +16,7 @@ async function adminTable() {
             } else {
                 statusHtml = '<span class="status out-of-stock">Out of Stock</span>';
             }
-            trow.innerHTML = 
+            trow.innerHTML = `
                 <td class = "product-info">
                     <img src="${item.image}" alt="${item.Name}" />
                     <p>${item.Name}</p>
@@ -34,6 +34,7 @@ async function adminTable() {
                     <button class="edit-btn" data-id="${item.id}">Edit</button>
                     <button class="delete-btn" data-id="${item.id}">Delete</button>
                 </td>
+                `
             ;
             tbody.appendChild(trow);
         });
