@@ -42,13 +42,16 @@ async function InitializationShopping() {
                 <h3>${items.Name}</h3>
                 <p>₦${items.price.toLocaleString()}</p>
                 </div>
+
                 <p class = "description"> ${items.description} </p>
+
                 <div class = "item-ratting-cart">
                 <p class =  "product-ratting">Ratting: ${items.ratting} 
                 <iconify-icon icon="fluent-color:star-48" class = "product-ratting-icon"></iconify-icon>
                 </p>
                 <button class="btn">Add to Cart</button>
                 </div>
+
             </li>
             `;
         }).join("");
