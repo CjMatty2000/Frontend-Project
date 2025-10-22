@@ -571,6 +571,12 @@ font-size: var(--font-text-base);
     background-color: var(--button-background-orange);
     color: var(--Hero-page-backgroundcolor1);
     padding: var(--padding-sm);
+    a{
+      text-decoration: none;
+      font-family: var(--font-libre);
+      font-size:var(--font-text-base) ;
+      color: var(--Hero-page-backgroundcolor1);
+    }
 }
 #place-order:hover{
    transform: scale(1.02);
