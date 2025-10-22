@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  /* Font-Family */
+  --font-libre: "David Libre", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Font-Sizes */
+  --font-heading-one: 70px;
+  --font-text-base: 16px;
+
+  /* Font-Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Colors */
+  --color-primary: #101A24;
+  --color-secondary: #ffffff;
+  --Hero-page-backgroundcolor1: #fff;
+  --Hero-page-backgroundcolor2: #f3f4f4;
+
+  /* Buttons */
+  --button-background-orange: #f67f20;
+  --button-background-darkblue: #101A24;
+  --padding-sm: 15px 24px;
+  --padding-md: 18px 32px;
+  --padding-md-two: 16px 32px;
+  --border-radius-sm: 10px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 32px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: #fff;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border-right: 1px solid #ddd; /* thin dividing line */
+}
+
+.left-section img {
+  max-width: 400px; /* not too big */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.auth-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+  max-width: 300px;
+  width: 100%;
+}
+
+.form-title {
+    font-size: var(--font-text-base(30px));
+    font-weight: var(--font-inter-bold(700));
+    margin-bottom: 1.5rem;
+}
+
+.form-sub-title {
+    font-size: var(--font-text-base(10px));
+    font-weight: var(--font-inter-normal);
+    margin-bottom: 1.5rem;
+}
+
+.link-email {
+    color: #199c26;
+    text-decoration: none;
+    font-size: var(--font-inter-text-base(10px));
+}
+
+.auth-button {
+    width: 100%;
+    background: #f67f20;
+    color: #fff;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    transition: background 0.3s ease;
+    animation-duration: 1.2s;
+}
+
+.auth-button:hover {
+    background: #e76b1c;
+}
+
+.btn-secondary {
+    width: 100%;
+    background: #ddd;
+    color: #333;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: background 0.3s ease;
+    animation-duration: 1.2s;
+}
+
+.btn-secondary:hover {
+    background: #ccc;
+}
+
+.auth-message { font-size: 0.95rem; margin: 0.6rem 0; }
+.auth-message.error { color: #d9534f; }
+.auth-message.success { color: #28a745; }   
+.auth-message.info { color: #333; }         
+
+.success-banner {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -100px; 
+  width: 90%;   
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.slide-up {
+  display: block;
+  animation: slideUp 0.5s ease forwards;
+}
+
+.toast {
+  display: block;
+  animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+from {bottom: -100px; opacity: 0; }
+    to { bottom: 40px; opacity: 1; }
+  }
+  
+
+@keyframes slideDown {
+  from { bottom: 40%; opacity: 1; }
+  to { bottom: -100px; opacity: 0; }
+}
+
+
+@media (max-width: 768px) {
+    .left-section img,
+    .illustration img {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .auth-container {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .left-section {
+        display: none;
+    }
+  }
