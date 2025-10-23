@@ -1,0 +1,14 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "email": "michaelamarachijoan@gmail.com",
+            "password": "hashed_password-123"
+        },
+        {
+            "id": 2,
+            "email": "test@example.com",
+            "password": "hashed_password-456"
+        }
+    ]
+}

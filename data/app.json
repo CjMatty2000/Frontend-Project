@@ -1,186 +1,238 @@
 {
-    "Menu": [
-        {
-            "id": 1,
-            "Name": "BangerRice and plantain",
-            "image": "/Images/BangerRice_and_Plantain.jpg",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 2,
-            "Name": "Bitterleaf Soup",
-            "image": "/Images/Bitterleaf_soup.jpg",
-            "price": 5500,
-            "available": true
-        },
-        {
-            "id": 3,
-            "Name": "Eba",
-            "image": "/Images/Eba.jpeg",
-            "price": 1000,
-            "available": true
-        },
-        {
-            "id": 4,
-            "Name": "Egusi Soup",
-            "image": "/Images/Egusi_soup.jpg",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 5,
-            "Name": "Esi Ewu",
-            "image": "/Images/Esi_Ewu.jpeg",
-            "price": 8000,
-            "available": true
-        },
-        {
-            "id": 6,
-            "Name": "Ewedu and Amala",
-            "image": "/Images/Ewedu_with_Amala.jpeg",
-            "price": 5000,
-            "available": true
-        },
-        {
-            "id": 7,
-            "Name": "Fish Peppersoup",
-            "image": "/Images/Fish_pepperSoup.jpeg",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 8,
-            "Name": "fisherman Soup",
-            "image": "/Images/Fisherman_Soup.jpeg",
-            "price": 5500,
-            "available": true
-        },
-        {
-            "id": 9,
-            "Name": "FriedRice with Turkey",
-            "image": "/Images/Fried_Rice_with_Turkey.jpeg",
-            "price": 6500,
-            "available": true
-        },
-        {
-            "id": 10,
-            "Name": "FriedRice and Salad",
-            "image": "/Images/Friedrice_and_salad.jpeg",
-            "price": 6000,
-            "available": true
-        },
-        {
-            "id": 11,
-            "Name": "Fufu",
-            "image": "/Images/fufu.jpg",
-            "price": 1000,
-            "available": true
-        },
-        {
-            "id": 12,
-            "Name": "Full Chicken",
-            "image": "/Images/FullChicken.jpeg",
-            "price": 9000,
-            "available": true
-        },
-        {
-            "id": 13,
-            "Name": "Jollof Rice with stew",
-            "image": "/Images/Jollof_Rice_with_Stew.jpg",
-            "price": 3000,
-            "available": true
-        },
-        {
-            "id": 14,
-            "Name": "Moi moi and Egg",
-            "image": "/Images/Moimoi_and_egg.jpeg",
-            "price": 4000,
-            "available": true
-        },
-        {
-            "id": 15,
-            "Name": "Noodles",
-            "image": "/Images/noddles.jpg",
-            "price": 3500,
-            "available": true
-        },
-        {
-            "id": 16,
-            "Name": "Ofe akwu",
-            "image": "/Images/Ofe_Akwu.png",
-            "price": 3000,
-            "available": true
-        },
-        {
-            "id": 17,
-            "Name": "Ofe Owerri",
-            "image": "/Images/Ofe_Owerri.webp",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 18,
-            "Name": "Oha Soup",
-            "image": "/Images/oha_soup.jpg",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 19,
-            "Name": "Rice and Stew",
-            "image": "/Images/Rice_and_stew.jpeg",
-            "price": 5000,
-            "available": true
-        },
-        {
-            "id": 20,
-            "Name": "Semovita",
-            "image": "/Images/Semovita.jpeg",
-            "price": 1000,
-            "available": true
-        },
-        {
-            "id": 21,
-            "Name": "Okpa am pap",
-            "image": "/Images/Okpa_and_pap.jpeg",
-            "price": 5000,
-            "available": true
-        },
-        {
-            "id": 22,
-            "Name": "Okra soup",
-            "image": "/Images/okra_soup.png",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 23,
-            "Name": "Spagheti with egg and chicken",
-            "image": "/Images/Spagheti_with_Egg_chicken.webp",
-            "price": 5000,
-            "available": true
-        },
-        {
-            "id": 24,
-            "Name": "Starch",
-            "image": "/Images/Starch.jpeg",
-            "price": 1000,
-            "available": true
-        },
-        {
-            "id": 25,
-            "Name": "Turkey",
-            "image": "/Images/Turkey.png",
-            "price": 4500,
-            "available": true
-        },
-        {
-            "id": 26,
-            "Name": "Vegitable Soup",
-            "image": "/Images/Vegetable_soup.jpg",
-            "price": 4500,
-            "available": true
-        }
-    ]
+  "Menu": [
+    {
+      "id": 1,
+      "Name": "BangerRice and plantain",
+      "image": "/Images/BangerRice_and_Plantain.jpg",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.3,
+      "description": "Savory rice served with sweet fried plantain for a classic Nigerian delight."
+    },
+    {
+      "id": 2,
+      "Name": "Bitterleaf Soup",
+      "image": "/Images/Bitterleaf_soup.jpg",
+      "price": 5500,
+      "available": true,
+      "ratting": 4.6,
+      "description": "Rich traditional soup with bitterleaf, meat, and spices full of flavor."
+    },
+    {
+      "id": 3,
+      "Name": "Eba",
+      "image": "/Images/Eba.jpeg",
+      "price": 1000,
+      "available": true,
+      "ratting": 4.5,
+      "description": "Smooth cassava-based swallow, perfect with any Nigerian soup."
+    },
+    {
+      "id": 4,
+      "Name": "Egusi Soup",
+      "image": "/Images/Egusi_soup.jpg",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.8,
+      "description": "Thick melon seed soup, rich with meat and vegetables."
+    },
+    {
+      "id": 5,
+      "Name": "Esi Ewu",
+      "image": "/Images/Esi_Ewu.jpeg",
+      "price": 8000,
+      "available": true,
+      "ratting": 4.7,
+      "description": "Spicy goat head delicacy, peppered and deeply flavorful."
+    },
+    {
+      "id": 6,
+      "Name": "Ewedu and Amala",
+      "image": "/Images/Ewedu_with_Amala.jpeg",
+      "price": 5000,
+      "available": true,
+      "ratting": 4.4,
+      "description": "Soft amala paired with rich ewedu soup for a Yoruba classic."
+    },
+    {
+      "id": 7,
+      "Name": "Fish Peppersoup",
+      "image": "/Images/Fish_pepperSoup.jpeg",
+      "price": 4500,
+      "available": true,
+      "ratting": 5.0,
+      "description": "Light, spicy fish broth served hot and comforting."
+    },
+    {
+      "id": 8,
+      "Name": "Fisherman Soup",
+      "image": "/Images/Fisherman_Soup.jpeg",
+      "price": 5500,
+      "available": true,
+      "ratting": 4.0,
+      "description": "Seafood-packed soup with bold spices and rich taste."
+    },
+    {
+      "id": 9,
+      "Name": "FriedRice with Turkey",
+      "image": "/Images/Fried_Rice_with_Turkey.jpeg",
+      "price": 6500,
+      "available": true,
+      "ratting": 5.0,
+      "description": "Colorful fried rice served with juicy grilled turkey."
+    },
+    {
+      "id": 10,
+      "Name": "FriedRice and Salad",
+      "image": "/Images/Friedrice_and_salad.jpeg",
+      "price": 6000,
+      "available": true,
+      "ratting": 4.8,
+      "description": "Flavorful fried rice paired with fresh crunchy salad."
+    },
+    {
+      "id": 11,
+      "Name": "Fufu",
+      "image": "/Images/fufu.jpg",
+      "price": 1000,
+      "available": true,
+      "ratting": 4.4,
+      "description": "Soft, stretchy swallow best enjoyed with hearty soups."
+    },
+    {
+      "id": 12,
+      "Name": "Full Chicken",
+      "image": "/Images/FullChicken.jpeg",
+      "price": 9000,
+      "available": true,
+      "ratting": 4.8,
+      "description": "Whole roasted chicken, juicy and perfectly seasoned."
+    },
+    {
+      "id": 13,
+      "Name": "Jollof Rice with stew",
+      "image": "/Images/Jollof_Rice_with_Stew.jpg",
+      "price": 3000,
+      "available": true,
+      "ratting": 4.6,
+      "description": "Smoky jollof rice served with rich tomato stew."
+    },
+    {
+      "id": 14,
+      "Name": "Moi moi and Egg",
+      "image": "/Images/Moimoi_and_egg.jpeg",
+      "price": 4000,
+      "available": true,
+      "ratting": 4.9,
+      "description": "Steamed bean pudding paired with boiled egg."
+    },
+    {
+      "id": 15,
+      "Name": "Noodles",
+      "image": "/Images/noddles.jpg",
+      "price": 3500,
+      "available": true,
+      "ratting": 4.9,
+      "description": "Quick and tasty noodles with a savory twist."
+    },
+    {
+      "id": 16,
+      "Name": "Ofe akwu",
+      "image": "/Images/Ofe_Akwu.png",
+      "price": 3000,
+      "available": true,
+      "ratting": 4.5,
+      "description": "Palm nut stew rich with flavor, often served with rice."
+    },
+    {
+      "id": 17,
+      "Name": "Ofe Owerri",
+      "image": "/Images/Ofe_Owerri.webp",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.7,
+      "description": "Special delicacy from Owerri, loaded with assorted meats."
+    },
+    {
+      "id": 18,
+      "Name": "Oha Soup",
+      "image": "/Images/oha_soup.jpg",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.0,
+      "description": "Traditional Igbo soup made with fresh oha leaves."
+    },
+    {
+      "id": 19,
+      "Name": "Rice and Stew",
+      "image": "/Images/Rice_and_stew.jpeg",
+      "price": 5000,
+      "available": true,
+      "ratting": 5.0,
+      "description": "White rice served with rich, spicy tomato stew."
+    },
+    {
+      "id": 20,
+      "Name": "Semovita",
+      "image": "/Images/Semovita.jpeg",
+      "price": 1000,
+      "available": true,
+      "ratting": 4.3,
+      "description": "Smooth semovita swallow, perfect with Nigerian soups."
+    },
+    {
+      "id": 21,
+      "Name": "Okpa am pap",
+      "image": "/Images/Okpa_and_pap.jpeg",
+      "price": 5000,
+      "available": true,
+      "ratting": 4.6,
+      "description": "Steamed okpa pudding served with soft pap."
+    },
+    {
+      "id": 22,
+      "Name": "Okra soup",
+      "image": "/Images/okra_soup.png",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.4,
+      "description": "Slimy and tasty okra soup, cooked with meats and spices."
+    },
+    {
+      "id": 23,
+      "Name": "Spagheti,egg and chicken",
+      "image": "/Images/Spagheti_with_Egg_chicken.webp",
+      "price": 5000,
+      "available": true,
+      "ratting": 4.7,
+      "description": "Delicious spaghetti served with boiled egg and grilled chicken."
+    },
+    {
+      "id": 24,
+      "Name": "Starch",
+      "image": "/Images/Starch.jpeg",
+      "price": 1000,
+      "available": true,
+      "ratting": 4.5,
+      "description": "Yellowish swallow, smooth and best with banga soup."
+    },
+    {
+      "id": 25,
+      "Name": "Turkey",
+      "image": "/Images/Turkey.png",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.8,
+      "description": "Tender, well-seasoned turkey grilled to perfection."
+    },
+    {
+      "id": 26,
+      "Name": "Vegitable Soup",
+      "image": "/Images/Vegetable_soup.jpg",
+      "price": 4500,
+      "available": true,
+      "ratting": 4.2,
+      "description": "Nutritious soup packed with leafy greens and spices."
+    }
+  ]
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Password Page</title>
+  <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+  <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="icon" href="/assests/icon/favicon.svg">
+</head>
+<body>
+  <div class="main-container">
+    <div class="left-section">
+      <img src="/Images/login.jpg" alt="Login Illustration">
+    </div>
+
+    <div class="auth-container">
+      <div id="register-form" class="form-container">
+        <h2 class="form-title">Reset Password</h2>
+
+        <form id="resetForm">
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="new-password" class="sr-only">New Password</label>
+            <input id="new-password" type="password" placeholder="New Password" minlength="6" class="form-input" autocomplete="new-password" required>
+          </div>
+
+          <div class="input-group">
+            <iconify-icon icon="mdi:password-outline" width="22" height="22" class="input-icon"></iconify-icon>
+            <label for="confirm-password" class="sr-only">Confirm Password</label>
+            <input id="confirm-password" type="password" placeholder="Confirm Password" minlength="6" class="form-input" autocomplete="new-password" required>
+          </div>
+
+          <button type="submit" class="auth-button">Change Password</button>
+        </form>
+
+        <div class="go-back-container">
+          <p>Remembered your password? <a href="login.html" class="link-text">Go back</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script/reset.js"></script>
+</body>
+</html>
