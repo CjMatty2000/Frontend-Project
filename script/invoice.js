@@ -73,7 +73,7 @@ console.log(customerDetails)
 
 function display(){
     overlay1.forEach($term => {
-        $term.style.display = "block"
+        $term.style.display = "flex"
     })
 }
 
