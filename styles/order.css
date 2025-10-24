@@ -29,6 +29,7 @@ img{
     --color-primary: #101A24;
     --Hero-page-backgroundcolor1: #fff;
     --Hero-page-backgroundcolor2: #f3f4f4;
+    --edit-color:rgb(2, 190, 2);
 
     /* buttons color, padding and radius */
     --button-background-orange: #EA6D27;
@@ -716,6 +717,14 @@ button:hover{
   body {
     overflow-x: hidden;
   }
+
+  .icons-container span{
+   display:none;
+  }
+
+   .icons-container iconify-icon {
+    color: var(--Hero-page-backgroundcolor1);
+   }
 
   .search-engine h1 {
     font-size: 1.5rem;
