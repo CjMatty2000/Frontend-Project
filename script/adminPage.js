@@ -38,9 +38,11 @@ async function adminTable() {
                 statusHtml = '<span class="status out-of-stock">Out of Stock</span>';
             }
             trow.innerHTML = `
-                <td class = "product-info">
-                    <img src="${item.image}" alt="${item.Name}" />
-                    <p>${item.Name}</p>
+                <td>
+                    <div class="product-info">
+                    <img src="${item.image}" alt="${item.name}" />
+                    <p>${item.name}</p>
+                    </div>
                 </td>
                 <td class="product-status">${item.status}</td>
                 <td class="product-id">${item.id}</td>
@@ -56,16 +58,6 @@ async function adminTable() {
                             Delete
                         </button>
                     </div>
-                </td>
-                <td class = "product-id">
-                    ${Math.floor(Math.random() * 100) + 1}
-                </td>
-                <td class = "product-price">
-                    ${item.price.toLocaleString()}
-                </td>
-                <td class = "product-actions">
-                    <button class="edit-btn" data-id="${item.id}">Edit</button>
-                    <button class="delete-btn" data-id="${item.id}">Delete</button>
                 </td>
                 `
             ;
