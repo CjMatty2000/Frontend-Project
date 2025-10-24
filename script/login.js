@@ -4,12 +4,27 @@ const password = document.getElementById('password');
 
 form.addEventListener('submit', e => {
   e.preventDefault();
+
   if (validateInputs()) {
-    // ✅ If inputs are valid → redirect
-    window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
-    // OR: form.submit(); if you want it to go to form's action attribute instead
+    const storedUser = JSON.parse(localStorage.getItem('registeredUser'));
+
+    if (!storedUser) {
+      alert('No registered user found. Please sign up first.');
+      return;
+    }
+
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (emailValue === storedUser.email && passwordValue === storedUser.password) {
+      alert('Login successful!');
+      window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
+    } else {
+      alert('Invalid email or password. Please try again.');
+    }
   }
 });
+
 
 const setError = (element, message) => {
   const inputControl = element.parentElement;
@@ -35,7 +50,6 @@ const isValidEmail = email => {
 };
 
 const isValidPassword = password => {
-  // At least 8 chars, one lowercase, one uppercase, one number, one special char
   const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return re.test(password);
 };
@@ -67,3 +81,4 @@ const validateInputs = () => {
 
   return isValid;
 };
+
