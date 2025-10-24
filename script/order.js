@@ -11,6 +11,7 @@ async function InitializationShopping() {
     const searchItem = document.getElementById("cart-search");
     const searchList = document.getElementById("search-list");
     const searchBtn = document.getElementById("search-btn");
+    const placeOrderBtn = document.getElementById("place-order")
 
     let cart = []; 
 
@@ -247,6 +248,10 @@ async function InitializationShopping() {
 
         hideAsideContainer.addEventListener("click", () => {
             asideContainer.classList.remove("active");
+        });
+
+        placeOrderBtn.addEventListener("click", () => {
+            window.location.href = "/pages/invoice.html"
         });
 
     } catch (error) {
