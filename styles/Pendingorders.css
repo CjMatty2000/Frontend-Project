@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Damion&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Damion&family=Inter:wght@100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     /* Font-Family */
     --font-libre:"David Libre", sans-serif;
@@ -30,6 +31,9 @@
     --border-radius-lg:32px;
     
 }
+body{
+    font-family: var(--font-libre);
+}
 
 
 main{
@@ -38,7 +42,8 @@ main{
     height: 45.20rem;
     display: flex;
     .section-1{
-        width: 70px;
+        width: 100%;
+        max-width: 100px;
         height: 100%;
         flex-grow: 0;
         border-right: 2px solid rgb(181, 180, 180);
@@ -69,6 +74,12 @@ main{
             #picture:active{
                 transform: scale(1.50,1.50);
             }
+             a:visited{
+                color: var(--button-background-orange);
+            }
+            a.active{
+                transform: scale(1.50,1.50);
+            }
         }
     }
     .section-2{
@@ -85,6 +96,9 @@ main{
                     padding: 0 20px 0 20px;
                     h3{
                         color: green;
+                        font-family: var(--font-libre);
+                        font-weight: var(--font-weight-bold);
+
                     }
                 }
                 .contain{
@@ -93,6 +107,8 @@ main{
                     margin: auto;
                     h3{
                         padding: 20px 0 0 20px;
+                        font-family: var(--font-libre);
+                        font-weight: var(--font-weight-bold);
                     }
                     .div10{
                         display: flex;
@@ -101,7 +117,7 @@ main{
                         color: gray;
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                     }
                     .div11{
                         display: flex;
@@ -109,7 +125,7 @@ main{
                         padding: 0 40px 0 40px;
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                     }
                 }
             .container{
@@ -133,7 +149,9 @@ main{
                         place-items: center;
                         border-radius: 10px;
                         h4{
-                            color: #EA6D27;
+                           color: #EA6D27;
+                            font-family: var(--font-libre);
+                            font-weight: var(--font-weight-bold);
                         }
                         img{
                             width: 63%;
@@ -161,6 +179,7 @@ main{
                     color: white;
                     font-family: var(--font-libre);
                     font-size: 19px;
+                    font-weight: var(--font-weight-bold);
                 }
                 button:hover{
                     transform: scale(1.05,1.05);
@@ -180,6 +199,8 @@ main{
             
             .h1{
                 margin-left: 20px;
+                font-family: var(--font-libre);
+                font-weight: var(--font-weight-bold);
             }
             .box{
                 width: 90%;
@@ -193,6 +214,8 @@ main{
                     border-bottom: 2px solid gray;
                     font-size: 1.50rem;
                     position: static;
+                    font-family: var(--font-libre);
+                    font-weight: var(--font-weight-bold);
                 }
                 .box-box{
                     margin: 2% 0 2% 2%;
@@ -207,6 +230,8 @@ main{
                         padding: 0 20px 0 20px;
                         p{
                             color: green;
+                            font-family: var(--font-libre);
+                            font-weight: var(--font-weight-bold);
                         }
                     }
                     .div2{
@@ -215,6 +240,8 @@ main{
                         padding: 0 20px 0 20px;
                         p{
                             color: green;
+                            font-family: var(--font-libre);
+                            font-weight: var(--font-weight-bold);
                         }
                     }
                 }
@@ -251,7 +278,7 @@ main{
                     /* margin: 20px 0 10px 30px; */
                     font-size: 26px;
                     font-family: var(--font-libre);
-                    font-weight: var(--font-weight-medium);
+                    font-weight: var(--font-weight-bold);
                 }
                 .term{
                     width: 100%;
@@ -268,13 +295,13 @@ main{
                     h2{
                         font-size: 23px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -285,13 +312,13 @@ main{
                     h2{
                         font-size: 23px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -302,13 +329,13 @@ main{
                     h2{
                         font-size: 23px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -324,13 +351,13 @@ main{
                     h2{
                         font-size: 19px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -341,13 +368,13 @@ main{
                     h2{
                         font-size: 23px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
                         font-family: var(--font-libre);
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -382,21 +409,21 @@ main{
     h2{
         font-size: 23px;
         font-family: var(--font-libre);
-        font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-bold);
     }
     h1{
         font-family: var(--font-libre);
-        font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-bold);
     }
     h3{
         font-family: var(--font-libre);
-        font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-bold);
     }
     h4{
         font-family: var(--font-libre);
-        font-weight: var(--font-weight-medium);
+        font-weight: var(--font-weight-bold);
     }
-    /.head{
+    .head{
         display: none;
     }
     .icon-place{

@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* Font-Family */
+    --font-libre:"David Libre", sans-serif;
+    --font-inter:"inter", sans-serif;
+
+    /* Font-Sizes */
+    --font-heading-one:70px;
+    --font-text-base: 16px;
+
+    /* Font-Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* colors */
+    --color-primary: #101A24;
+    --Hero-page-backgroundcolor1: #fff;
+    --Hero-page-backgroundcolor2: #f3f4f4;
+
+    /* buttons color, padding and radius */
+    --button-background-orange: #EA6D27;
+    --button-background-darkblue: #101A24;
+    --padding-sm: 15px 24px;
+    --padding-md: 18px 32px;
+    --padding-md-two: 16px 32px;
+    --border-radius-sm: 10px;
+    --border-radius-md: 15px;
+    --border-radius-lg:32px;
+    
+}
+.weui--back-filled {
+  display: inline-block;
+  width: 12px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 24'%3E%3Cpath fill='%23000' fill-rule='evenodd' d='m3.343 12l7.071 7.071L9 20.485l-7.778-7.778a1 1 0 0 1 0-1.414L9 3.515l1.414 1.414z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+main{
+    width: 100%;
+    height: 45.50rem;
+    display: flex;
+    .section-1{
+        width: 100%;
+        max-width: 100px;
+        height: 100%;
+        flex-grow: 0;
+        border-right: 3px solid rgb(181, 180, 180);
+
+
+        #picture-1{
+                width: 50px;
+                height: 50px;
+                margin: 20px 0 0 27px;
+            }
+
+
+        nav{
+            display: grid;
+            justify-items: center;
+            gap: 45px;
+
+            #picture{
+                width: 26px;
+                height: 26px;
+                transition: all 0.20 linear;
+            }
+
+            #picture:hover{
+                transform: scale(1.50,1.50);
+            }
+
+            #picture:active{
+                transform: scale(1.50,1.50);
+            }
+            a:visited{
+                color: var(--button-background-orange);
+            }
+            a.active{
+                transform: scale(1.50,1.50);
+            }
+        }
+    }
+}
+
+
+.section-2{
+    flex-grow: 2;
+    .back{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: orange;
+    margin: 30px 0 0 50px;
+    border-radius: 10px;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+.back:hover{
+    background-color: var(--button-background-darkblue);
+    transform: scale(1.2,1.2);
+}
+.weui--back-filled{
+    color: white;
+}
+.confirmation{
+    width: 50%;
+    height: 70%;
+    margin: 20px auto;
+    img{
+       width: 100%;
+       height: 100%;
+    }
+}
+h1{
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+p{
+    margin: auto;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(170, 168, 168);
+}
+}
+
+/* for quaries section */
+.second-section{
+    display: none;
+}
+.third-section{
+    display: none;
+}
+
+@media screen and (max-width: 1366px) {
+    main{
+        display: none;
+    }
+    .second-section{
+        display: block;
+        width: 100%;
+        height: 45.50rem;
+        display: flex;
+        .section-1{
+               width: 70px;
+               height: 100%;
+               flex-grow: 0;
+               border-right: 2px solid rgb(181, 180, 180);
+               #picture-1{
+                    width: 50px;
+                    height: 50px;
+                    margin: 20px 0 0 5px;
+                }
+                nav{
+                   display: grid;
+                   justify-items: center;
+                    gap: 45px;
+                   #picture{
+                       width: 26px;
+                       height: 26px;
+                       transition: all 0.20 linear;
+                    }
+                    #picture:hover{
+                        transform: scale(1.50,1.50);
+                    }
+                    #picture:active{
+                        transform: scale(1.50,1.50);
+                   }
+                }
+            }
+    }
+    .section-2{
+        flex-grow: 2;
+        .back{
+           width: 35px;
+           height: 35px;
+           display: flex;
+           justify-content: center;
+           align-content: center;
+           background-color: orange;
+           margin: 30px 0 0 50px;
+           border-radius: 10px;
+           padding-top: 5px;
+           cursor: pointer;
+        }
+        .weui--back-filled{
+           color: white;
+        }
+        .confirmation{
+           width: 50%;
+           height: 50%;
+           margin: 20px auto;
+           img{
+              width: 100%;
+              height: 100%;
+            }
+        }
+        h1{
+           margin: auto;
+           font-weight: bold;
+           text-align: center;
+           font-size: 30px;
+           font-family: sans-serif;
+        }
+        p{
+           margin: auto;
+           font-weight: bold;
+           font-size: 17px;
+           text-align: center;
+           font-family: sans-serif;
+           color: rgb(170, 168, 168);
+        }
+    } 
+}
+@media  screen and (max-width: 490px) and (max-height: 932px){
+    main{
+        display: none;
+    }
+    .second-section{
+        display: none;
+    }
+    .third-section{
+        display: block;
+        width: 100%;
+        height: 56rem;
+        .back{
+           width: 35px;
+           height: 35px;
+           display: flex;
+           justify-content: center;
+           align-content: center;
+           background-color: orange;
+           margin: 30px 0 0 50px;
+           border-radius: 10px;
+           padding-top: 5px;
+           cursor: pointer;
+        }
+        .weui--back-filled{
+           color: white;
+        }
+        .confirmation{
+           width: 50%;
+           height: 50%;
+           padding-top: 50%;
+           img{
+              width: 100%;
+              height: 100%;
+              
+            }
+        }
+        h1{
+           margin: auto;
+           font-weight: bold;
+           text-align: center;
+           font-size: 20px;
+           font-family: sans-serif;
+        }
+        p{
+           margin: auto;
+           font-weight: bold;
+           font-size: 14px;
+           text-align: center;
+           font-family: sans-serif;
+           color: rgb(170, 168, 168);
+        }
+    }
+
+
+}
