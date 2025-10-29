@@ -257,9 +257,9 @@ body {
     border: 2px solid var(--button-background-orange);
     cursor: pointer;
 }
-#image-capture-label input,#image-gallery-label input{
-    /*   display: none;   */
-}
+/* #image-capture-label input,#image-gallery-label input{
+     display: none;  
+} */
 #image-capture-label iconify-icon,#image-gallery-label iconify-icon{
     font-size: 50px;
     color: var(--button-background-orange);
