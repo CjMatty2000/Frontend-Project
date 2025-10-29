@@ -7,7 +7,7 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   if (validateInputs()) {
     saveToLocalStorage();
-    window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
+    window.location.href = "/class.html";
   }
 });
 

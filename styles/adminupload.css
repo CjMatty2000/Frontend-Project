@@ -435,4 +435,10 @@ body {
     margin-top: 1rem;
     color: var(--Hero-page-backgroundcolor1);
 }
+a:visited{
+  color: var(--button-background-orange);
+}
+a.active{
+  transform: scale(1.50,1.50);
+}
 
