@@ -33,6 +33,8 @@ img {
   --color-primary-faint: #d1d5db;
   --Hero-page-backgroundcolor1: #fff;
   --Hero-page-backgroundcolor2: #f3f4f4;
+   --edit-color:rgb(3, 177, 3);
+   --color-red:red;
 
   /* Buttons */
   --button-background-orange: #EA6D27;
@@ -52,6 +54,9 @@ body {
   height: 100vh;
   font-family: var(--font-inter);
   overflow-y: hidden;
+}
+.hidden {
+  display: none !important;
 }
 
 .container {
@@ -146,7 +151,32 @@ max-height: 100vh;
   flex: 1;
   background-color: transparent;
   overflow-y: auto;
+  scroll-behavior: smooth;
+
+  
+   scrollbar-width: thin;
+  scrollbar-color: var(--button-background-orange) var(--Hero-page-backgroundcolor2);
+
 }
+
+/* .admin-table::-webkit-scrollbar {
+  width: 15px;             
+} */
+
+/* .admin-table::-webkit-scrollbar-track {
+  background: var(--Hero-page-backgroundcolor2);       
+  border-radius: var(--border-radius-sm);
+} */
+
+/* .admin-table::-webkit-scrollbar-thumb {
+  background: var(--button-background-orange);  
+    border-radius: var(--border-radius-sm);
+} */
+
+/* .admin-table::-webkit-scrollbar-thumb:hover {
+  background: var(--button-background-darkblue); 
+} */
+
 
 /* PRODUCT TABLE */
 .product-table {
@@ -160,10 +190,11 @@ max-height: 100vh;
   top: 0;
   z-index: 2;
   border: 2px solid var(--color-primary);
-  color: var(--color-primary);
+  color: var(--Hero-page-backgroundcolor1);
   font-weight: var(--font-weight-bold);
   padding: 1rem;
   text-align: center;
+  background-color: var(--button-background-orange);
 }
 
 /* Table Body */
@@ -171,7 +202,7 @@ max-height: 100vh;
   padding: var(--extra-padding);
   color: var(--color-primary);
   font-size: var(--font-text-base);
-  font-weight: var(--font-weight-medium);
+   font-weight: var(--font-weight-bold);
   border: 2px solid var(--color-primary);
   text-align: left;
 }
@@ -182,11 +213,20 @@ max-height: 100vh;
   gap: 10px;
 }
 
-.product-row td img {
+.product-row img {
   width: 50px;
   height: 50px;
-  border-radius: 8px;
+  border: 3px solid var(--button-background-orange);
+  border-radius: var(--border-radius-md);
   margin-right: 10px;
+}
+
+.status-in-stock{
+  color: var(--edit-color);
+}
+
+.status-out-of-stock{
+  color:var(--color-red);
 }
 
 .product-status,
@@ -195,3 +235,175 @@ max-height: 100vh;
 .product-actions {
   text-align: center;
 }
+
+.product-actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.edit-btn,.delete-btn{
+  width:30%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--font-text-base);
+  font-weight: var(--font-weight-bold);
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+}
+.edit-btn{
+  color: var(--edit-color);
+}
+.delete-btn{
+  color:var(--button-background-orange);
+}
+.message{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  inset: 0;
+   background-color: rgba(0, 0, 0, 0.267);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+ }
+ .delete-message{
+  width: 100%;
+  max-width: 500px;
+  min-height: 100px;
+  background-color: var(--Hero-page-backgroundcolor1);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+ }
+ .message-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+ }
+ .message-icon img{
+  width: 50px;
+  height: auto;
+ }
+ .message-actions{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+ }
+ #confirm-btn,#close-btn{
+  width: 30%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-text-base);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  color: var(--Hero-page-backgroundcolor1);
+  background-color: var(--button-background-orange);
+  transition: background-color 0.3s ease-in-out;
+ }
+  #confirm-btn:hover,#close-btn:hover{
+  background-color: var(--button-background-darkblue);
+  } 
+  .edit-message{
+   width: 100%;
+  max-width: 700px;
+  min-height: 100px;
+  background-color: var(--Hero-page-backgroundcolor1);
+  padding: 1rem;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  }
+  #edit-image-label{
+    width: 100%;
+  max-width: 200px;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 1rem;
+    cursor: pointer;
+    background-color: var(--Hero-page-backgroundcolor2);
+    border-radius: var(--border-radius-sm);
+    border: 2px solid var(--button-background-orange);
+    margin: 0 auto;
+  }
+  #edit-image-input{
+      display: none;
+  }
+  .item-detail{
+    display: flex;
+    flex-wrap:wrap;
+  gap: 2rem; 
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+   min-height: 30%;
+  margin: 0 auto; 
+  text-align: left;
+   padding: 10px;
+  }
+  .input-field{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.input-field label {
+    font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+.input-field input,#edit-status{
+  width: 100%;
+  padding:15px 10px;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid var(--Hero-page-backgroundcolor2);
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: var(--font-text-base);
+}
+#edit-status{
+  cursor: pointer;
+}
+ 
+.buttons{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#save-edit-btn,#cancel-edit-btn{
+  width: 30%;
+  padding: 15px;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-text-base);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  color: var(--Hero-page-backgroundcolor1);
+  background-color: var(--button-background-orange);
+  transition: background-color 0.3s ease-in-out;
+}
+  #save-edit-btn:hover,#cancel-edit-btn:hover{
+    background-color: var(--button-background-darkblue);
+ }

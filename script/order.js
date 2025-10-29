@@ -11,6 +11,7 @@ async function InitializationShopping() {
     const searchItem = document.getElementById("cart-search");
     const searchList = document.getElementById("search-list");
     const searchBtn = document.getElementById("search-btn");
+    const placeOrderBtn = document.getElementById("place-order")
 
     let cart = []; 
 
@@ -42,13 +43,16 @@ async function InitializationShopping() {
                 <h3>${items.Name}</h3>
                 <p>₦${items.price.toLocaleString()}</p>
                 </div>
+
                 <p class = "description"> ${items.description} </p>
+
                 <div class = "item-ratting-cart">
                 <p class =  "product-ratting">Ratting: ${items.ratting} 
                 <iconify-icon icon="fluent-color:star-48" class = "product-ratting-icon"></iconify-icon>
                 </p>
                 <button class="btn">Add to Cart</button>
                 </div>
+
             </li>
             `;
         }).join("");
@@ -244,6 +248,10 @@ async function InitializationShopping() {
 
         hideAsideContainer.addEventListener("click", () => {
             asideContainer.classList.remove("active");
+        });
+
+        placeOrderBtn.addEventListener("click", () => {
+            window.location.href = "/pages/invoice.html"
         });
 
     } catch (error) {
