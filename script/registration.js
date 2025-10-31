@@ -6,8 +6,7 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (validateInputs()) {
-    saveToLocalStorage();
-    window.location.href = "/class.html";
+    window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
   }
 });
 
@@ -35,6 +34,7 @@ const isValidEmail = email => {
 };
 
 const isValidPassword = password => {
+  // At least 8 chars, one lowercase, one uppercase, one number, one special char
   const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   return re.test(password);
 };
@@ -44,7 +44,7 @@ const validateInputs = () => {
   const passwordValue = password.value.trim();
   const password2Value = password2.value.trim();
 
-  let isValid = true; 
+  let isValid = true; // Track overall validity
 
   if (emailValue === '') {
     setError(email, 'Email is required');
@@ -76,17 +76,5 @@ const validateInputs = () => {
     setSuccess(password2);
   }
 
-  return isValid; 
+  return isValid; // ✅ return true/false
 };
-
-function saveToLocalStorage() {
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
-
-  const userData = {
-    email: emailValue,
-    password: passwordValue
-  };
-
-  localStorage.setItem('registeredUser', JSON.stringify(userData));
-}
