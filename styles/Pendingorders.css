@@ -32,7 +32,7 @@
     
 }
 body{
-    font-family: var(--font-libre);
+
 }
 
 
@@ -94,9 +94,13 @@ main{
                     display: flex;
                     justify-content: space-between;
                     padding: 0 20px 0 20px;
+                    h1{
+                        font-family: var(--font-inter);
+                        font-weight: var(--font-weight-bold);
+                    }
                     h3{
                         color: green;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -107,7 +111,8 @@ main{
                     margin: auto;
                     h3{
                         padding: 20px 0 0 20px;
-                        font-family: var(--font-libre);
+                        font-size: 20px;
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
                     }
                     .div10{
@@ -116,16 +121,20 @@ main{
                         padding: 0 20px 0 20px;
                         color: gray;
                         font-size: 15px;
-                        font-family: var(--font-libre);
-                        font-weight: var(--font-weight-bold);
+                        p{
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
                     }
                     .div11{
                         display: flex;
                         justify-content: space-between;
                         padding: 0 40px 0 40px;
                         font-size: 15px;
-                        font-family: var(--font-libre);
-                        font-weight: var(--font-weight-bold);
+                        p{
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
                     }
                 }
             .container{
@@ -133,6 +142,8 @@ main{
                 height: 60%;
                 h1{
                     padding: 0 0 0 20px;
+                    font-family: var(--font-inter);
+                    font-weight: var(--font-weight-bold);
                 }
                 .sub-container{
                     width: 100%;
@@ -150,7 +161,15 @@ main{
                         border-radius: 10px;
                         h4{
                            color: #EA6D27;
-                            font-family: var(--font-libre);
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
+                        p{
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
+                        h3{
+                            font-family: var(--font-inter);
                             font-weight: var(--font-weight-bold);
                         }
                         img{
@@ -177,7 +196,7 @@ main{
                     font-weight: bold;
                     transition: all 0.80 linear;
                     color: white;
-                    font-family: var(--font-libre);
+                    font-family: var(--font-inter);
                     font-size: 19px;
                     font-weight: var(--font-weight-bold);
                 }
@@ -199,7 +218,8 @@ main{
             
             .h1{
                 margin-left: 20px;
-                font-family: var(--font-libre);
+                font-size: 23px;
+                font-family: var(--font-inter);
                 font-weight: var(--font-weight-bold);
             }
             .box{
@@ -214,7 +234,7 @@ main{
                     border-bottom: 2px solid gray;
                     font-size: 1.50rem;
                     position: static;
-                    font-family: var(--font-libre);
+                    font-family: var(--font-inter);
                     font-weight: var(--font-weight-bold);
                 }
                 .box-box{
@@ -228,9 +248,13 @@ main{
                         display: flex;
                         justify-content: space-between;
                         padding: 0 20px 0 20px;
+                        h3{
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
                         p{
                             color: green;
-                            font-family: var(--font-libre);
+                            font-family: var(--font-inter);
                             font-weight: var(--font-weight-bold);
                         }
                     }
@@ -238,9 +262,12 @@ main{
                         display: flex;
                         justify-content: space-between;
                         padding: 0 20px 0 20px;
-                        p{
-                            color: green;
-                            font-family: var(--font-libre);
+                        h3{
+                            font-family: var(--font-inter);
+                            font-weight: var(--font-weight-bold);
+                        }
+                        h4{
+                            font-family: var(--font-inter);
                             font-weight: var(--font-weight-bold);
                         }
                     }
@@ -259,16 +286,22 @@ main{
 
     }
     .overlay {  
-        display: none;
+        display: none;  
+        place-content: cen;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        background-color: rgba(128, 128, 128, 0.7);
+        min-height: 100vh;
+        background-color: rgba(128, 128, 128, 0.7); /* semi-transparent gray */
+        /* z-index: 999; */
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+
         .receipt{
                 width: 24%;
-                height: 90%;
+                height: 93%;
                 background-color: white;
                 /* background-color: rgb(178, 176, 176); */
                 position: absolute;
@@ -277,7 +310,7 @@ main{
                 h1{
                     /* margin: 20px 0 10px 30px; */
                     font-size: 26px;
-                    font-family: var(--font-libre);
+                    font-family: var(--font-inter);
                     font-weight: var(--font-weight-bold);
                 }
                 .term{
@@ -294,13 +327,13 @@ main{
                     padding: 1% 7% ;
                     h2{
                         font-size: 23px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -311,13 +344,13 @@ main{
                     padding: 1% 7% ;
                     h2{
                         font-size: 23px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -328,13 +361,13 @@ main{
                     padding:  1% 7% ;
                     h2{
                         font-size: 23px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -350,13 +383,13 @@ main{
                     border-radius: 10px;
                     h2{
                         font-size: 19px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -367,13 +400,13 @@ main{
                     padding:  1% 7% ;
                     h2{
                         font-size: 23px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
-                        font-family: var(--font-libre);
+                        font-family: var(--font-inter);
                         font-weight: var(--font-weight-bold);
 
                     }
@@ -398,7 +431,11 @@ main{
                     }
                 }
             }
-    }  
+    } 
+    .overlay.showme{
+    display: flex;
+    opacity: 1;
+} 
     .myp{
         text-align: center;
         padding-top: 50%;
@@ -406,23 +443,9 @@ main{
         font-weight: bold;
         color: gray;
     } 
-    h2{
-        font-size: 23px;
-        font-family: var(--font-libre);
-        font-weight: var(--font-weight-bold);
-    }
-    h1{
-        font-family: var(--font-libre);
-        font-weight: var(--font-weight-bold);
-    }
-    h3{
-        font-family: var(--font-libre);
-        font-weight: var(--font-weight-bold);
-    }
-    h4{
-        font-family: var(--font-libre);
-        font-weight: var(--font-weight-bold);
-    }
+    
+    
+    
     .head{
         display: none;
     }
@@ -433,10 +456,12 @@ main{
 
 @media screen and (max-width: 1366px) {
      body .overlay  .receipt{
-        width: 45% ;
-        height: 65%;
-        position: relative;
-        right: 100%;
+        max-width: 360px;
+        min-width: 250px;
+        min-height: 700px;
+        max-height: 570px;
+        padding: 0 0 20px 0;
+        
     } 
     .head{
         display: none;
@@ -457,10 +482,11 @@ main{
         flex-direction: column;
         /* margin-top: 30px; */
     }
+    
      body .overlay  .receipt{
-        width: 55% ;
-        height: 90%;
+        
      }
+     
      .head{
         display: block;
     }

@@ -418,7 +418,7 @@ main{
 }
 .overlay {
   display: none;  
-  place-content: cen;
+  place-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -804,6 +804,7 @@ main{
             }    
         } 
     }
+}
 } 
 
 @media  screen and (max-width: 490px) and (max-height: 932px){
@@ -939,5 +940,4 @@ main{
                         transform: translateY(0px);
                 } 
 
-}
 }

@@ -1,3 +1,34 @@
+:root{
+    /* Font-Family */
+    --font-libre:"David Libre", sans-serif;
+    --font-inter: "Inter", sans-serif;
+
+    /* Font-Sizes */
+  --font-heading-one: clamp(32px, 5vw, 70px);
+    --font-text-base: 16px;
+
+    /* Font-Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+
+    /* colors */
+    --color-primary: #101A24;
+    --Hero-page-backgroundcolor1: #fff;
+    --Hero-page-backgroundcolor2: #f3f4f4;
+    --edit-color:rgb(2, 190, 2);
+
+    /* buttons color, padding and radius */
+    --button-background-orange: #EA6D27;
+    --button-background-darkblue: #101A24;
+    --padding-sm: 15px 24px;
+    --padding-md: 18px 32px;
+    --padding-md-two: 16px 32px;
+    --border-radius-sm: 10px;
+    --border-radius-md: 15px;
+    --border-radius-lg:32px;
+    
+}
 .weui--back-filled {
   display: inline-block;
   width: 12px;
@@ -83,14 +114,16 @@ h1{
     font-weight: bold;
     text-align: center;
     font-size: 35px;
-    font-family: sans-serif;
+    font-family: var(--font-libre);
+    font-weight: var(--font-weight-bold);
 }
 p{
     margin: auto;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    font-family: sans-serif;
+    font-weight: var(--font-weight-medium);
+    font-family: var(--font-libre);
     color: rgb(170, 168, 168);
 }
 }
@@ -171,7 +204,7 @@ p{
            font-weight: bold;
            text-align: center;
            font-size: 30px;
-           font-family: sans-serif;
+           font-family: var();
         }
         p{
            margin: auto;
