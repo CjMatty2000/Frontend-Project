@@ -17,6 +17,12 @@ async function InitializationShopping() {
 
 
     try {
+
+         function saveCart(){
+           localStorage.setItem("myCart", JSON.stringify(cart));
+            
+       } 
+
         const menuToggle = document.getElementById("menu-toggle");
         const iconsContainer = document.querySelector(".icons-container");
 
@@ -39,10 +45,14 @@ async function InitializationShopping() {
                 <img src="${items.image}" alt="${items.Name}">
             </div>
 
-                <div class="product-info">
+            <div class="content">
+
+            <div class="product-info">
+
                 <h3>${items.Name}</h3>
                 <p>₦${items.price.toLocaleString()}</p>
-                </div>
+
+            </div>
 
                 <p class = "description"> ${items.description} </p>
 
@@ -53,6 +63,10 @@ async function InitializationShopping() {
                 <button class="btn">Add to Cart</button>
                 </div>
 
+          </div>
+
+                
+
             </li>
             `;
         }).join("");
@@ -61,19 +75,27 @@ async function InitializationShopping() {
          searchList.classList.add("hidden");
         myListItem.innerHTML = products;
 
-      // Add event listener once for both lists
+         if (localStorage.getItem("myCart")) {
+    cart = JSON.parse(localStorage.getItem("myCart"));
+    renderCart();  
+}
 
-            myListItem.addEventListener("click", (e) => {
-        if (e.target.classList.contains("btn")) {
-            const productId = e.target.closest("li").dataset.id;
-            addToCart(productId);
-        }
-        });
 
-        function saveCart(){
-           localStorage.setItem("myCart", JSON.stringify(cart));
-            
-       } 
+    function updateButtonsState() {
+ document.querySelectorAll(".btn").forEach(btn => {
+    const id = btn.closest("li").dataset.id;
+
+    // Check if this product is in localStorage cart
+    const isInCart = cart.some(item => item.id == id);
+
+    if (isInCart) {
+        btn.textContent = "Added";
+    }else{
+        btn.textContent = "Add to cart";
+    }
+});
+}
+updateButtonsState();
 
      function addToCart(productId) {
      const productDetails = data.Menu.find(productItem=> productItem.id == productId);
@@ -101,6 +123,7 @@ async function InitializationShopping() {
         emptyCart.style.display = "flex";
         cartCount.textContent = 0;
         cartTotalAmount.textContent = "₦0.00";
+        updateButtonsState();
         return;
     }
 
@@ -140,7 +163,7 @@ async function InitializationShopping() {
                 cartItem.quantity -= 1;
             } else {
                 cart = cart.filter(item => item.id !== cartItem.id);
-
+                updateButtonsState();
             }
             saveCart();
             renderCart();
@@ -157,7 +180,18 @@ async function InitializationShopping() {
 
     cartCount.textContent = itemCount;
     cartTotalAmount.textContent = `₦${totalAmount.toLocaleString()}`;
+    updateButtonsState();
 }
+        renderCart();
+
+         // Add event listener once for both lists
+
+            myListItem.addEventListener("click", (e) => {
+        if (e.target.classList.contains("btn")) {
+            const productId = e.target.closest("li").dataset.id;
+            addToCart(productId);
+        }
+        });
      
           // Search functionality
 
@@ -169,6 +203,7 @@ async function InitializationShopping() {
                 searchList.classList.add("hidden");
                 myListItem.classList.remove("hidden");
                 searchList.innerHTML = ""; 
+                updateButtonsState();
                 return;
             };
 
@@ -202,8 +237,6 @@ async function InitializationShopping() {
                 searchList.classList.remove("hidden");   
                 searchList.innerHTML = searchResults;  
             }  else {
-                myListItem.classList.add("hidden");       
-                searchList.classList.remove("hidden");
                 searchList.innerHTML = `
                 <section class = "error-search">
                 <h2> No item found, Try searching with a different keyword. </h2>
@@ -215,17 +248,16 @@ async function InitializationShopping() {
             </svg>
                 </section>
                 `;
+
+                 myListItem.classList.add("hidden");       
+                searchList.classList.remove("hidden");
             };
 
-            searchList.addEventListener("click", (e) => {
-            if (e.target.classList.contains("btn")) {
-                const productId = e.target.closest("li").dataset.id;
-                addToCart(productId);
-            }
-            });
+           
+            updateButtonsState();
 
-     }    
-     
+     }  
+  
        searchItem.addEventListener("input", (event) => {
             const searchTerm = event.target.value.toLowerCase().trim();
             performSearch(searchTerm);
@@ -239,6 +271,13 @@ async function InitializationShopping() {
                 performSearch(term);
             }
         });
+
+         searchList.addEventListener("click", (e) => {
+    if (e.target.classList.contains("btn")) {
+        const productId = e.target.closest("li").dataset.id;
+        addToCart(productId);
+    }
+});
 
 
         // asideContainer Toggle
@@ -257,11 +296,6 @@ async function InitializationShopping() {
     } catch (error) {
         myListItem.textContent = "Sorry an error occurred while fetching the data.";
     }
-
-    if (localStorage.getItem("myCart")) {
-    cart = JSON.parse(localStorage.getItem("myCart"));
-    renderCart();  
-}
 
 }
 

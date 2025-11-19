@@ -2,7 +2,7 @@
   "Menu": [
     {
       "id": 1,
-      "Name": "BangerRice and plantain",
+      "Name": "BangerRice",
       "image": "/Images/BangerRice_and_Plantain.jpg",
       "price": 4500,
       "available": true,
@@ -47,7 +47,7 @@
     },
     {
       "id": 6,
-      "Name": "Ewedu and Amala",
+      "Name": "Ewedu & Amala",
       "image": "/Images/Ewedu_with_Amala.jpeg",
       "price": 5000,
       "available": true,
@@ -74,7 +74,7 @@
     },
     {
       "id": 9,
-      "Name": "FriedRice with Turkey",
+      "Name": "FriedRice & Turkey",
       "image": "/Images/Fried_Rice_with_Turkey.jpeg",
       "price": 6500,
       "available": true,
@@ -83,7 +83,7 @@
     },
     {
       "id": 10,
-      "Name": "FriedRice and Salad",
+      "Name": "FriedRice & Salad",
       "image": "/Images/Friedrice_and_salad.jpeg",
       "price": 6000,
       "available": true,
@@ -110,7 +110,7 @@
     },
     {
       "id": 13,
-      "Name": "Jollof Rice with stew",
+      "Name": "Jollof Rice & stew",
       "image": "/Images/Jollof_Rice_with_Stew.jpg",
       "price": 3000,
       "available": true,
@@ -119,7 +119,7 @@
     },
     {
       "id": 14,
-      "Name": "Moi moi and Egg",
+      "Name": "Moi moi & Egg",
       "image": "/Images/Moimoi_and_egg.jpeg",
       "price": 4000,
       "available": true,
@@ -164,7 +164,7 @@
     },
     {
       "id": 19,
-      "Name": "Rice and Stew",
+      "Name": "Rice & Stew",
       "image": "/Images/Rice_and_stew.jpeg",
       "price": 5000,
       "available": true,
@@ -182,7 +182,7 @@
     },
     {
       "id": 21,
-      "Name": "Okpa am pap",
+      "Name": "Okpa & pap",
       "image": "/Images/Okpa_and_pap.jpeg",
       "price": 5000,
       "available": true,
@@ -200,7 +200,7 @@
     },
     {
       "id": 23,
-      "Name": "Spagheti,egg and chicken",
+      "Name": "Spagheti & chicken",
       "image": "/Images/Spagheti_with_Egg_chicken.webp",
       "price": 5000,
       "available": true,
