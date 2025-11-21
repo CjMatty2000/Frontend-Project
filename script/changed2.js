@@ -17,26 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const resendLinkBtn = document.querySelector('.btn-secondary');
-    if (resendLinkBtn) {
-        resendLinkBtn.addEventListener('click', function() {
-            const successMessage = document.getElementById('success-message');
-            if (successMessage) {
-                successMessage.textContent = "📧 Verification link has been resent!";
-                successMessage.classList.remove('hidden');
-                successMessage.classList.add('slide-up');
-                
-                setTimeout(() => {
-                    successMessage.classList.remove('slide-up');
-                    successMessage.classList.add('hidden');
-                }, 3000);
-            }
-        });
-    }
-
     const successMessage = document.getElementById('success-message');
     if (successMessage) {
-        successMessage.textContent = "✅ Password reset completed! Verification email sent.";
+        successMessage.textContent = "✅ Password reset completed! You can login.";
         successMessage.classList.remove('hidden');
         successMessage.classList.add('slide-up');
         

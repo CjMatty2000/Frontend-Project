@@ -6,7 +6,7 @@ const password2 = document.getElementById('password2');
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (validateInputs()) {
-    window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
+    window.location.href = "../pages/order.html";
   }
 });
 

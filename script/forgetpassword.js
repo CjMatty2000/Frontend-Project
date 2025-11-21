@@ -4,7 +4,7 @@ const email = document.getElementById('email');
 form.addEventListener('submit', e => {
   e.preventDefault();
   if (validateInputs()) {
-    window.location.href = "/pages/changed.html";
+    window.location.href = "../pages/reset.html";
   }
 });
 
