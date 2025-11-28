@@ -96,6 +96,15 @@ body, html {
     margin-bottom: 1.5rem;
 }
 
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #f67f20;
+}
+
 .input-group {
     position:relative;
     margin-bottom: 20px;

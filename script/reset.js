@@ -107,3 +107,18 @@ async function resetPassword(email, newPassword, submitButton) {
     submitButton.disabled = false;
     submitButton.textContent = "Change Password";
 }
+
+document.querySelectorAll(".toggle-password").forEach(icon => {
+    icon.addEventListener("click", () => {
+        const targetId = icon.getAttribute("data-target");
+        const input = document.getElementById(targetId);
+
+        if (input.type === "password") {
+            input.type = "text";
+            icon.innerHTML = '<iconify-icon icon="mdi:eye-off" width="22" height="22"></iconify-icon>';
+        } else {
+            input.type = "password";
+            icon.innerHTML = '<iconify-icon icon="mdi:eye" width="22" height="22"></iconify-icon>';
+        }
+    });
+});
