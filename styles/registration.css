@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Damion&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  /* Font-Family */
+  --font-libre: "David Libre", serif;
+  --font-inter: "Inter", sans-serif;
+
+  /* Font-Sizes */
+  --font-heading-one: 70px;
+  --font-text-base: 16px;
+
+  /* Font-Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Colors */
+  --color-primary: #101A24;
+  --color-secondary: #ffffff;
+  --Hero-page-backgroundcolor1: #fff;
+  --Hero-page-backgroundcolor2: #f3f4f4;
+
+  /* Buttons */
+  --button-background-orange: #f67f20;
+  --button-background-darkblue: #101A24;
+  --padding-sm: 15px 24px;
+  --padding-md: 18px 32px;
+  --padding-md-two: 16px 32px;
+  --border-radius-sm: 10px;
+  --border-radius-md: 15px;
+  --border-radius-lg: 32px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-inter);
+  background-color: white;
+}
+
+.login-page {
+  margin: 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 400px; 
+  padding: 30px;
+  border-left: 2px solid grey;
+}
+
+
+.login-image {
+  width: 500px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.input-favicon {
+  width: 100%;
+  margin-top: 25px;
+  position: relative;
+} 
+
+.input-favicon i {
+  position: absolute;
+  margin-top: 25px;
+  margin-left: 8px;
+  transform: translateY(-70%);
+  color: #EA6D27;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}  
+
+
+.input-favicon input {
+  width: 100%;
+  padding: 12px 10px 10px 35px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition:border 0.3s ease; 
+}
+
+.password-change {
+  border: none;
+  background: none;
+  color: var(--button-background-orange);
+  font-family: var(--font-inter);
+  font-size: medium;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.login-form {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  color: white;
+  background-color: var(--button-background-orange);
+  text-align: center;
+  padding: var(--padding-sm);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-text-base);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-form:hover {
+  background-color: #cf5b1d;
+}
+
+.social-login {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+.google-login {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.google-login a {
+  text-decoration: none;
+  color: var(--button-background-darkblue);
+  font-weight: var(--font-weight-bold);
+}
+
+.google-login i {
+  color: blue;
+}
+
+.signup-text {
+  font-size: var(--font-text-base);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-inter);
+}
+
+.signup-text a {
+  color: var(--button-background-orange);
+  text-decoration: none;
+}
+
+.signup-span {
+  color: var(--button-background-orange);
+  font-size: var(--font-text-base);
+}
+
+.signuptext-item1 {
+  margin-top: 40px;
+}
+
+.signuptext-item2 {
+  text-align: center;
+}
+
+
+/* JS + CSS validation styles */
+.input-favicon input:focus {
+  outline: 0;
+}
+
+.input-favicon.success input {
+  border-color: #09c372;
+}
+
+.input-favicon.error input {
+  border-color: #ff3860;
+}
+
+.input-favicon .error {
+  color: #ff3860;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .login-image {
+    display: none;
+  }
+}

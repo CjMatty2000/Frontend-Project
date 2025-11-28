@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="icon" type="image/x-icon" href="../assests/icon/favicon.svg">
+    <link rel="stylesheet" href="/styles/registration.css">
+   <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="login-page">
+  <img class="login-image" src="/Images/restaurant image.jpeg" alt="Login illustration">
+
+  <div class="login-form-container">
+    <h2>Registration</h2>
+
+    <form action="https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html" id="loginForm" method="POST">
+      
+      <div class="input-favicon">
+        <label for="email"><i class="fa-solid fa-at"></i></label>
+        <input type="email" id="email" name="email" placeholder="Email address">
+        <div class="error"></div>
+      </div>
+
+      
+      <div class="input-favicon">
+        <label for="password"><i class="fa-solid fa-lock"></i></label>
+        <input type="password" id="password" name="password" placeholder="Password">
+        <div class="error"></div>
+      </div>
+
+      <div class="input-favicon">
+        <label for="password"><i class="fa-solid fa-lock"></i></label>
+        <input type="password" id="password2" name="password" placeholder="confirm Password">
+        <div class="error"></div>
+      </div>
+
+      <p class="signup-text signuptext-item1">
+        By signing below, you agree to the <span class="signup-span">Team of use</span> and <span class="signup-span">privacy notice</span> 
+      </p>
+
+
+      <div class="login-container">
+        <button type="submit" class="login-form">Sign up</button>
+      </div>
+
+      <!-- Signup Link -->
+      <p class="signup-text signuptext-item2">
+        Don’t have an account? <a href="http://127.0.0.1:5500/pages/login.html">Login</a>
+      </p>
+    </form>
+  </div>
+</div>
+ 
+    <script src="/script/registration.js"></script>
+</body>
+</html>
