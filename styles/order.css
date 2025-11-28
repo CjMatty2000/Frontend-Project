@@ -621,6 +621,15 @@ button:hover{
     width: 300px;
   }
 }
+ a:visited{
+      color: var(--button-background-orange);
+ }
+a.active{
+    transform: scale(1.50,1.50);
+}
+a:hover{
+  transform: scale(1.50,1.50);
+}
 
 /* For tablets and medium screens (max-width: 768px) */
 @media (max-width: 768px) {

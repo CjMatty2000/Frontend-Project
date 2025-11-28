@@ -10,6 +10,8 @@ let productPrice = document.querySelectorAll("#price1")
 let productQauntity = document.querySelectorAll("#quantity1")
 let term = document.querySelectorAll(".term")
 let totalOne = document.querySelectorAll(".total")
+let message = document.querySelector(".message")
+let btn3 = document.querySelector(".btn3")
 
 let receipiant = document.querySelector(".Receipent-name");
 let  Gender = document.querySelector(".sex-type");
@@ -54,7 +56,12 @@ let putItems = () => {
         }
          window.location.href = "/pages/successfullpage.html"
     }else{
-        alert("please put your details")
+        setTimeout(() => {
+            message.classList.add("showmessage")
+            setTimeout(() => {
+                message.classList.remove("showmessage")
+            },2500)
+        },200)
     }
    
 }
@@ -73,7 +80,16 @@ console.log(customerDetails)
 
 function display(){
     overlay1.forEach($term => {
-        $term.style.display = "flex"
+        setTimeout(() => {
+            $term.classList.add("showme")
+            btn3.addEventListener("click",() => {
+                window.location.href = "/pages/printedinvoice.html"
+            })
+            $term.addEventListener("click",() => {
+                $term.classList.remove("showme")
+            })
+        },100)
+        // $term.style.display = "flex"
     })
 }
 

@@ -1,10 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 :root{
     /* Font-Family */
     --font-libre:"David Libre", sans-serif;
-    --font-inter: "Inter", sans-serif;
+    --font-inter:"inter", sans-serif;
 
     /* Font-Sizes */
-  --font-heading-one: clamp(32px, 5vw, 70px);
+    --font-heading-one:70px;
     --font-text-base: 16px;
 
     /* Font-Weights */
@@ -16,7 +22,6 @@
     --color-primary: #101A24;
     --Hero-page-backgroundcolor1: #fff;
     --Hero-page-backgroundcolor2: #f3f4f4;
-    --edit-color:rgb(2, 190, 2);
 
     /* buttons color, padding and radius */
     --button-background-orange: #EA6D27;
@@ -47,16 +52,17 @@ main{
     height: 45.50rem;
     display: flex;
     .section-1{
-        width: 70px;
+        width: 100%;
+        max-width: 100px;
         height: 100%;
         flex-grow: 0;
-        border-right: 2px solid rgb(181, 180, 180);
+        border-right: 3px solid rgb(181, 180, 180);
 
 
         #picture-1{
                 width: 50px;
                 height: 50px;
-                margin: 20px 0 0 5px;
+                margin: 20px 0 0 27px;
             }
 
 
@@ -78,6 +84,12 @@ main{
             #picture:active{
                 transform: scale(1.50,1.50);
             }
+            a:visited{
+                color: var(--button-background-orange);
+            }
+            a.active{
+                transform: scale(1.50,1.50);
+            }
         }
     }
 }
@@ -96,6 +108,11 @@ main{
     border-radius: 10px;
     padding-top: 5px;
     cursor: pointer;
+    transition: all 0.2s linear;
+}
+.back:hover{
+    background-color: var(--button-background-darkblue);
+    transform: scale(1.2,1.2);
 }
 .weui--back-filled{
     color: white;
@@ -114,16 +131,14 @@ h1{
     font-weight: bold;
     text-align: center;
     font-size: 35px;
-    font-family: var(--font-libre);
-    font-weight: var(--font-weight-bold);
+    font-family: sans-serif;
 }
 p{
     margin: auto;
     font-weight: bold;
     font-size: 20px;
     text-align: center;
-    font-weight: var(--font-weight-medium);
-    font-family: var(--font-libre);
+    font-family: sans-serif;
     color: rgb(170, 168, 168);
 }
 }
@@ -204,7 +219,7 @@ p{
            font-weight: bold;
            text-align: center;
            font-size: 30px;
-           font-family: var();
+           font-family: sans-serif;
         }
         p{
            margin: auto;

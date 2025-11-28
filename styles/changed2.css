@@ -102,11 +102,11 @@ body, html {
     margin-bottom: 1.5rem;
 }
 
-.link-email {
+/* .link-email {
     color: #199c26;
     text-decoration: none;
     font-size: var(--font-inter-text-base(10px));
-}
+} */
 
 .auth-button {
     width: 100%;

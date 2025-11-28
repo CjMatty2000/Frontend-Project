@@ -257,9 +257,9 @@ body {
     border: 2px solid var(--button-background-orange);
     cursor: pointer;
 }
-#image-capture-label input,#image-gallery-label input{
-    /*   display: none;   */
-}
+/* #image-capture-label input,#image-gallery-label input{
+     display: none;  
+} */
 #image-capture-label iconify-icon,#image-gallery-label iconify-icon{
     font-size: 50px;
     color: var(--button-background-orange);
@@ -420,4 +420,10 @@ body {
     text-align: center;
     margin-top: 1rem;
     color: var(--Hero-page-backgroundcolor1);
+}
+a:visited{
+  color: var(--button-background-orange);
+}
+a.active{
+  transform: scale(1.50,1.50);
 }

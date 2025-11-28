@@ -18,7 +18,7 @@ form.addEventListener('submit', e => {
 
     if (emailValue === storedUser.email && passwordValue === storedUser.password) {
       alert('Login successful!');
-      window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
+      window.location.href = "/class.html";
     } else {
       alert('Invalid email or password. Please try again.');
     }

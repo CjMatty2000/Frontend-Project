@@ -195,7 +195,7 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
-   opacity: 0;
+  opacity: 0;
   visibility: hidden; 
   pointer-events: none; 
   transition: all 0.3s ease-in-out;
@@ -434,5 +434,11 @@ body {
     text-align: center;
     margin-top: 1rem;
     color: var(--Hero-page-backgroundcolor1);
+}
+a:visited{
+  color: var(--button-background-orange);
+}
+a.active{
+  transform: scale(1.50,1.50);
 }
 
