@@ -44,6 +44,7 @@ async function adminTable() {
                     <p>${item.name}</p>
                     </div>
                 </td>
+                <td class="product-quantity">${item.quantity}</td>
                 <td class="product-status">${item.status}</td>
                 <td class="product-id">${item.id}</td>
                 <td class="product-price">${item.price}</td>
@@ -76,6 +77,81 @@ async function adminTable() {
         const editStatusSelect = document.getElementById("edit-status");
         const editIdInput = document.getElementById("edit-product-id");
         const editImagePreview = document.getElementById("edit-image-preview");
+        const editquantity = document.getElementById("edit-product-qauntity")
+
+        editPriceInput.addEventListener("input", function(e) {
+    let value = e.target.value;
+    
+    // Remove any negative signs at the beginning
+    if (value.startsWith('-')) {
+        e.target.value = value.substring(1);
+        return;
+    }
+    
+    // Only allow numbers and one decimal point
+    value = value.replace(/[^\d.]/g, '');
+    
+    // Ensure only one decimal point
+    const decimalParts = value.split('.');
+    if (decimalParts.length > 2) {
+        value = decimalParts[0] + '.' + decimalParts.slice(1).join('');
+    }
+    
+    // Limit to 2 decimal places
+    if (decimalParts.length === 2 && decimalParts[1].length > 2) {
+        value = decimalParts[0] + '.' + decimalParts[1].substring(0, 2);
+    }
+    
+    // Check maximum value
+    const numValue = parseFloat(value);
+    if (!isNaN(numValue) && numValue > 10000) {
+        e.target.value = "10000";
+        return;
+    }
+    
+    e.target.value = value;
+        });
+
+        editquantity.addEventListener("input", function(e) {
+    let value = e.target.value;
+    
+    // Remove any negative signs
+    if (value.startsWith('-')) {
+        e.target.value = value.substring(1);
+        return;
+    }
+    
+    // Only allow numbers
+    value = value.replace(/[^\d]/g, '');
+    
+    // Check maximum value
+    const numValue = parseInt(value);
+    if (!isNaN(numValue) && numValue > 1000) {
+        e.target.value = "1000";
+        return;
+    }
+    
+    e.target.value = value;
+    });
+
+
+    editPriceInput.addEventListener("keydown", function(e) {
+    if (e.key === '-' || e.key === 'Subtract') {
+        e.preventDefault();
+    }
+});
+
+editquantity.addEventListener("keydown", function(e) {
+    if (e.key === '-' || e.key === 'Subtract') {
+        e.preventDefault();
+    }
+});
+
+
+
+
+
+
 
         // Handle delete button click
         tbody.addEventListener("click", (e) => {
@@ -102,6 +178,7 @@ async function adminTable() {
                     editPriceInput.value = product.price;
                     editStatusSelect.value = product.status;
                     editIdInput.value = product.id;
+                    editquantity.value = product.quantity;
                     editImagePreview.src = product.image;
                 }
             }
@@ -132,7 +209,7 @@ async function adminTable() {
         });
 
         // Handle Edit form submission
-       /*  editForm.addEventListener("submit", (e) => {
+        editForm.addEventListener("submit", (e) => {
             e.preventDefault();
             if (editRow) {
                 const productId = editRow.querySelector(".product-id").textContent;
@@ -142,18 +219,20 @@ async function adminTable() {
                     product.name = editNameInput.value;
                     product.price = editPriceInput.value;
                     product.status = editStatusSelect.value;
+                    product.quantity = editquantity.value
 
                     localStorage.setItem("productData", JSON.stringify(storedData));
                     editRow.querySelector(".product-info p").textContent = product.name;
                     editRow.querySelector(".product-price").textContent = product.price;
                     editRow.querySelector(".product-status").textContent = product.status;
+                    editRow.querySelector(".product-quantity").textContent = product.quantity;
 
                     message.classList.add("hidden");
                     editMsg.classList.add("hidden");
                     editRow = null;
                 }
             }
-        }); */
+        }); 
 
     } catch (error) {
         console.error(error);

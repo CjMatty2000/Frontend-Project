@@ -333,6 +333,7 @@ font-size: var(--font-text-base);
   }
 
 .list-product button{
+    width: 150px;
     outline: none;
     resize: none;
     border: none;
@@ -347,6 +348,7 @@ font-size: var(--font-text-base);
     background-color: var(--button-background-orange);
     color: var(--Hero-page-backgroundcolor1);
     padding: var(--padding-sm); 
+    
 }
 .list-product button:hover{
     transform: scale(1.05);
@@ -575,6 +577,39 @@ font-size: var(--font-text-base);
 }
 #place-order:hover{
    transform: scale(1.02);
+}
+
+.btn-quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-decrease, .btn-increase {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+    background: white;
+    color: #007bff;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.btn-decrease:hover, .btn-increase:hover {
+    background: #007bff;
+    color: white;
+}
+
+.btn-quantity {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* button{

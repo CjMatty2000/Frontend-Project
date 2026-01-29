@@ -86,17 +86,65 @@ async function InitializationShopping() {
     const id = btn.closest("li").dataset.id;
 
     // Check if this product is in localStorage cart
-    const isInCart = cart.some(item => item.id == id);
+    const isInCart = cart.find(item => item.id == id);
 
     if (isInCart) {
-        btn.textContent = "Added";
+        btn.innerHTML = `<div class="btn-quantity-control">
+                    <button class="btn-decrease" data-id="${id}">-</button>
+                    <span class="btn-quantity">${isInCart.quantity}</span>
+                    <button class="btn-increase" data-id="${id}">+</button>
+                </div>`
+
     }else{
         btn.textContent = "Add to cart";
     }
 });
+attachQuantityControlEvents();
 }
+
+
 updateButtonsState();
 
+
+
+function attachQuantityControlEvents() {
+    document.querySelectorAll('.btn-decrease').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const productId = e.target.dataset.id;
+            const cartItem = cart.find(item => item.id == productId);
+            
+            if (cartItem.quantity > 1) {
+                cartItem.quantity -= 1;
+            } else {
+                cart = cart.filter(item => item.id != productId);
+            }
+            
+            saveCart();
+            renderCart();
+        });
+    });
+
+
+    document.querySelectorAll('.btn-increase').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const productId = e.target.dataset.id;
+            const cartItem = cart.find(item => item.id == productId);
+            
+            if (cartItem) {
+                cartItem.quantity += 1;
+            } else {
+                // If item somehow doesn't exist in cart, add it
+                addToCart(productId);
+                return;
+            }
+            
+            saveCart();
+            renderCart();
+        });
+    });
+}
+
+// add to cart section
      function addToCart(productId) {
      const productDetails = data.Menu.find(productItem=> productItem.id == productId);
      const productIndex = cart.findIndex(item => item.id == productId);

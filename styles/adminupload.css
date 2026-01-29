@@ -274,7 +274,7 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 60%; 
-   min-height: 30%;
+   min-height: 45%;
   margin: 0 auto; 
   text-align: left;
    padding: 10px;
@@ -302,7 +302,7 @@ body {
   cursor: pointer;
 }
 #save-product{
-    margin: 1.3rem auto 0 auto;
+    margin: 0 auto 25px auto;
     width:15%;
     outline: none;
     border: none;
