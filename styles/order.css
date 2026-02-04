@@ -611,6 +611,12 @@ font-size: var(--font-text-base);
     text-align: center;
     font-weight: bold;
 }
+.picture.active {
+    background-color: #4CAF50 !important;  
+    color: white !important;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 
 /* button{
     width: max-content;

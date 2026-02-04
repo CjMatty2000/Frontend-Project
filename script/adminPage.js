@@ -8,6 +8,266 @@ async function adminTable() {
         const deleteMsg = document.querySelector(".delete-message");
         const editMsg = document.querySelector(".edit-message");
 
+        // ========== CHANGE 1: Get ALL items from localStorage ONLY ==========
+        let storedData = JSON.parse(localStorage.getItem("productData")) || [];
+        
+        
+        
+        // Now all items are in storedData
+        const allItems = storedData;
+        // =====================================================
+
+        tbody.innerHTML = "";
+
+        // Redirect works always
+        addProductBtn.addEventListener("click", () => {
+            window.location.href = "adminupload.html";
+        });
+
+        // Empty message
+        if (allItems.length === 0) {
+            tbody.innerHTML = "<tr><td colspan='5'>No products available.</td></tr>";
+        }
+
+        // ========== CHANGE 2: Display ALL items ==========
+        allItems.forEach(item => {
+            const trow = document.createElement("tr");
+            trow.className = "product-row";
+            
+            let statusHtml;
+            if (item.available === true || item.status === "In Stock") {
+                statusHtml = '<span class="status in-stock">In Stock</span>';
+            } else {
+                statusHtml = '<span class="status out-of-stock">Out of Stock</span>';
+            }
+            
+            trow.innerHTML = `
+                <td>
+                    <div class="product-info">
+                    <img src="${item.image}" alt="${item.name}" />
+                    <p>${item.name}</p>
+                    </div>
+                </td>
+                <td class="product-quantity">${item.quantity || 0}</td>
+                <td class="product-status">${item.status || 'In Stock'}</td>
+                <td class="product-id">${item.id}</td>
+                <td class="product-price">₦${item.price.toLocaleString()}</td>
+                <td>
+                    <div class="product-actions">
+                        <button class="edit-btn" data-id="${item.id}">
+                            <iconify-icon icon="bitcoin-icons:edit-filled" width="24" height="24"></iconify-icon>
+                            Edit
+                        </button>
+                        <button class="delete-btn" data-id="${item.id}">
+                            <iconify-icon icon="mdi:delete" width="24" height="24"></iconify-icon>
+                            Delete
+                        </button>
+                    </div>
+                </td>
+            `;
+            tbody.appendChild(trow);
+        });
+
+        let deleteRow = null;
+        let editRow = null;
+
+        // Edit form elements
+        const editForm = document.getElementById("edit-form");
+        const editImageInput = document.getElementById("edit-image-input");
+        const editNameInput = document.getElementById("edit-product-name");
+        const editPriceInput = document.getElementById("edit-product-price");
+        const editStatusSelect = document.getElementById("edit-status");
+        const editIdInput = document.getElementById("edit-product-id");
+        const editImagePreview = document.getElementById("edit-image-preview");
+        const editquantity = document.getElementById("edit-product-qauntity");
+
+        // Price validation
+        editPriceInput.addEventListener("input", function(e) {
+            let value = e.target.value;
+            
+            if (value.startsWith('-')) {
+                e.target.value = value.substring(1);
+                return;
+            }
+            
+            value = value.replace(/[^\d.]/g, '');
+            
+            const decimalParts = value.split('.');
+            if (decimalParts.length > 2) {
+                value = decimalParts[0] + '.' + decimalParts.slice(1).join('');
+            }
+            
+            if (decimalParts.length === 2 && decimalParts[1].length > 2) {
+                value = decimalParts[0] + '.' + decimalParts[1].substring(0, 2);
+            }
+            
+            const numValue = parseFloat(value);
+            if (!isNaN(numValue) && numValue > 10000) {
+                e.target.value = "10000";
+                return;
+            }
+            
+            e.target.value = value;
+        });
+
+        // Quantity validation
+        editquantity.addEventListener("input", function(e) {
+            let value = e.target.value;
+
+            if (value.startsWith('-')) {
+                e.target.value = value.substring(1);
+                return;
+            }
+            
+            value = value.replace(/[^\d]/g, '');
+            
+            const numValue = parseInt(value);
+            if (!isNaN(numValue) && numValue > 1000) {
+                e.target.value = "1000";
+                return;
+            }
+            
+            e.target.value = value;
+        });
+
+        // Prevent minus key
+        editPriceInput.addEventListener("keydown", function(e) {
+            if (e.key === '-' || e.key === 'Subtract') {
+                e.preventDefault();
+            }
+        });
+
+        editquantity.addEventListener("keydown", function(e) {
+            if (e.key === '-' || e.key === 'Subtract') {
+                e.preventDefault();
+            }
+        });
+
+        // ========== CHANGE 3: Handle delete button click ==========
+        tbody.addEventListener("click", (e) => {
+            const deleteBtn = e.target.closest(".delete-btn");
+            const editBtn = e.target.closest(".edit-btn");
+            
+            if (deleteBtn) {
+                message.classList.remove("hidden");
+                deleteMsg.classList.remove("hidden");
+                deleteRow = deleteBtn.closest("tr");
+            }
+            
+            // Handle edit button click 
+            if (editBtn) {
+                message.classList.remove("hidden");
+                editMsg.classList.remove("hidden");
+                editRow = editBtn.closest("tr");
+
+                // Get the product id
+                const productId = editRow.querySelector(".product-id").textContent;
+                
+                // ========== CHANGE 4: Find in ALL items ==========
+                const product = allItems.find(item => item.id === productId);
+
+                if(product){
+                    editNameInput.value = product.name;
+                    editPriceInput.value = product.price;
+                    editStatusSelect.value = product.status || 'In Stock';
+                    editIdInput.value = product.id;
+                    editquantity.value = product.quantity || 0;
+                    editImagePreview.src = product.image;
+                }
+            }
+        });
+
+        // ========== CHANGE 5: Handle Confirm delete ==========
+        confirmBtn.addEventListener("click", () => {
+            if (deleteRow) {
+                const productId = deleteRow.querySelector(".product-id").textContent;
+                
+                // Delete from storedData
+                const updatedData = allItems.filter(item => item.id !== productId);
+                localStorage.setItem("productData", JSON.stringify(updatedData));
+                
+                // Remove from display
+                deleteRow.remove();
+                deleteRow = null;
+                message.classList.add("hidden");
+                deleteMsg.classList.add("hidden");
+
+                if(tbody.children.length === 0) {
+                    tbody.innerHTML = "<tr><td colspan='5'>No products available.</td></tr>";
+                }
+                
+                // Refresh the table to show updated data
+                adminTable();
+            }
+        });
+
+        // Handle Close button
+        closeBtn.addEventListener("click", () => {
+            message.classList.add("hidden");
+            deleteMsg.classList.add("hidden");
+            deleteRow = null;
+        });
+
+        // ========== CHANGE 6: Handle Edit form submission ==========
+        editForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (editRow) {
+                const productId = editRow.querySelector(".product-id").textContent;
+                
+                // Find the product in allItems
+                const itemIndex = allItems.findIndex(item => item.id === productId);
+                
+                if (itemIndex !== -1) {
+                    // Update the item
+                    allItems[itemIndex] = {
+                        ...allItems[itemIndex],
+                        name: editNameInput.value,
+                        price: editPriceInput.value,
+                        status: editStatusSelect.value,
+                        quantity: editquantity.value,
+                        image: editImagePreview.src
+                    };
+                    
+                    // Save to localStorage
+                    localStorage.setItem("productData", JSON.stringify(allItems));
+                    
+                    // Update the display row
+                    editRow.querySelector(".product-info p").textContent = editNameInput.value;
+                    editRow.querySelector(".product-price").textContent = `₦${editPriceInput.value}`;
+                    editRow.querySelector(".product-status").textContent = editStatusSelect.value;
+                    editRow.querySelector(".product-quantity").textContent = editquantity.value;
+
+                    message.classList.add("hidden");
+                    editMsg.classList.add("hidden");
+                    editRow = null;
+                    
+                    alert("Item updated successfully!");
+                }
+            }
+        }); 
+
+    } catch (error) {
+        console.error(error);
+        const tbody = document.getElementById("product-table-body");
+        tbody.innerHTML = "<tr><td colspan='5'>Sorry, an error occurred while fetching the data.</td></tr>";
+    }
+}
+
+adminTable();
+
+
+
+
+/*async function adminTable() {
+    try {
+        const tbody = document.getElementById("product-table-body");
+        const confirmBtn = document.getElementById("confirm-btn");
+        const closeBtn = document.getElementById("close-btn");
+        const addProductBtn = document.getElementById("add-product-btn");
+        const message = document.querySelector(".message");
+        const deleteMsg = document.querySelector(".delete-message");
+        const editMsg = document.querySelector(".edit-message");
+
         // Fetch Data
         const response = await fetch("../data/app.json");
         const data = await response.json();
@@ -88,16 +348,14 @@ async function adminTable() {
         return;
     }
     
-    // Only allow numbers and one decimal point
     value = value.replace(/[^\d.]/g, '');
     
-    // Ensure only one decimal point
     const decimalParts = value.split('.');
     if (decimalParts.length > 2) {
         value = decimalParts[0] + '.' + decimalParts.slice(1).join('');
     }
     
-    // Limit to 2 decimal places
+    
     if (decimalParts.length === 2 && decimalParts[1].length > 2) {
         value = decimalParts[0] + '.' + decimalParts[1].substring(0, 2);
     }
@@ -114,8 +372,7 @@ async function adminTable() {
 
         editquantity.addEventListener("input", function(e) {
     let value = e.target.value;
-    
-    // Remove any negative signs
+
     if (value.startsWith('-')) {
         e.target.value = value.substring(1);
         return;
@@ -241,4 +498,4 @@ editquantity.addEventListener("keydown", function(e) {
     }
 }
 
-adminTable();
+adminTable();*/
