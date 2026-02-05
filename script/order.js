@@ -38,7 +38,7 @@ async function InitializationShopping() {
         // Display products with stock status
         const products = menuArray.map(items => {
             const availableQuantity = items.quantity || 0;
-            const cartItem = cart.find(cartItem => cartItem.id == items.id);
+            const cartItem = cart.find(cartItem => cartItem.id === items.id);
             const inCartQuantity = cartItem ? cartItem.quantity : 0;
             const remainingQuantity = availableQuantity - inCartQuantity;
             const isOutOfStock = availableQuantity <= 0;

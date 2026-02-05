@@ -21,6 +21,40 @@ async function saveProduct() {
 
 
 
+    idInput.addEventListener("input", function(e) {
+    let value = e.target.value;
+    
+    // Remove any negative signs at the beginning
+    if (value.startsWith('-')) {
+        e.target.value = value.substring(1);
+        return;
+    }
+    
+    // Only allow numbers and one decimal point
+    value = value.replace(/[^\d.]/g, '');
+    
+    // Ensure only one decimal point
+    const decimalParts = value.split('.');
+    if (decimalParts.length > 2) {
+        value = decimalParts[0] + '.' + decimalParts.slice(1).join('');
+    }
+    
+    // Limit to 2 decimal places
+    if (decimalParts.length === 2 && decimalParts[1].length > 2) {
+        value = decimalParts[0] + '.' + decimalParts[1].substring(0, 2);
+    }
+    
+    // Check maximum value
+    const numValue = parseFloat(value);
+    if (!isNaN(numValue) && numValue > 10000) {
+        e.target.value = "10000";
+        return;
+    }
+    
+    e.target.value = value;
+});
+
+
 
      priceInput.addEventListener("input", function(e) {
     let value = e.target.value;
@@ -166,8 +200,9 @@ productqauntity.addEventListener("keydown", function(e) {
                 price: priceInput.value.trim(),
                 image: imagePreview.src || "", 
             };
-
             const existingProduct = JSON.parse(localStorage.getItem("productData")) || [];
+            console.log(existingProduct.id)
+
                 existingProduct.push(productData);
                 localStorage.setItem("productData", JSON.stringify(existingProduct));
         };
