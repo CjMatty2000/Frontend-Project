@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (goBackLink) {
         goBackLink.addEventListener('click', function(e) {
             e.preventDefault();
-            window.location.href = "login.html";
+            window.location.href = "../pages/login.html";
         });
     }
 });
@@ -99,7 +99,7 @@ async function resetPassword(email, newPassword, submitButton) {
         localStorage.setItem('userDatabase', JSON.stringify(userDatabase));
         
         alert("Password reset successfully!");
-        window.location.href = "changed.html";
+        window.location.href = "../pages/changed.html";
     } else {
         alert("No account found with this email address.");
     }

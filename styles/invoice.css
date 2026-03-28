@@ -54,25 +54,25 @@
 }
 
 main{
-    /* width: 100%;
+    width: 100%;
     max-width: 100%;
-    height: 45.50rem;
-    display: flex; */
+    height: 100vh;
+    /* height: 45.50rem; */
     display: flex;
+    overflow-x: hidden;
 
 
     .section-1{
-         width: 100%;
+        width: 100%;
         max-width: 100px;
         height: 100%;
         border-right: 2px solid rgb(181, 180, 180);
-        background-color: #101A24;
 
 
         #picture-1{
                 width: 50px;
                 height: 50px;
-                margin: 20px 0 0 5px;
+                margin: 20px 0 0 28px;
             }
 
 
@@ -90,8 +90,10 @@ main{
             #picture:hover{
                 transform: scale(1.50,1.50);
             }
-
-            #picture:active{
+             a:visited{
+                color: var(--button-background-orange);
+            }
+            a.active{
                 transform: scale(1.50,1.50);
             }
         }
@@ -107,6 +109,7 @@ main{
             h3{
                 font-size: 35px;
                 margin: 10px 0 0 50px;
+                font-weight: var(--font-weight-bold);
             }
             .contain{
                 display: grid;
@@ -123,7 +126,7 @@ main{
             }
             label{
                 margin-bottom: 6px;
-                font-weight: var(--font-weight-medium);
+                font-weight: var(--font-weight-bold);
                 font-size: 19px;
 
             }
@@ -132,6 +135,7 @@ main{
                 height: 46px;
                 padding: 0 0 0 11px;
                 font-size: 17px;
+                font-weight: var(--font-weight-bold);
                 border-radius: 10px;
                 border: 1px solid #ccc;
 
@@ -145,6 +149,7 @@ main{
                 margin: auto;
                 padding: 0 0 0 11px;
                 font-size: 17px;
+                font-weight: var(--font-weight-bold);
                 border-radius: 10px;
                 border: 1px solid #ccc;
 
@@ -164,7 +169,7 @@ main{
                 .item{
                     width: 94%;
                     display: grid;
-                    grid-template-columns: 75px 175px 170px 170px 1fr;
+                    grid-template-columns: 85px 280px 170px 170px 1fr;
                     gap: 10px;
                     border: 2px solid #ccc;
                     place-items: center;
@@ -172,18 +177,18 @@ main{
                     padding: 10px;
                     border-radius: 10px;
                     .name p{
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                         font-size: 20px;
     
                     }
                     .price p{
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                         color: orange;
                         font-size: 17px;
     
                     }
                     .quantity p{
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                         font-size: 16px;
     
                     }
@@ -219,6 +224,7 @@ main{
                         justify-content: space-between;
                         margin-top: 20px;
                         padding: 10px;
+                        font-weight: var(--font-weight-bold);
                     }
                     .total-quantity{
                         display: flex;
@@ -226,6 +232,7 @@ main{
                         margin-top: 20px;
                         padding: 10px;
                         margin-bottom: 10px;
+                        font-weight: var(--font-weight-bold);
 
                     }
                 .btn-button{
@@ -238,16 +245,19 @@ main{
                         background: 0;
                         width: 150px;
                         height: 40px;
-                        background-color: black;
+                        background-color: var(--color-primary);
                         border-radius: 5px;
                         color: white;
                         font-size: 15px;
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                         a{
                             text-decoration: none;
                             color: white;
                         }
-                }
+                    }
+                    .btn-2:hover{
+                        transform: scale(1.1,1.1);
+                    }
                 }    
                 }
                 .btn-1{
@@ -256,18 +266,20 @@ main{
                     background: 0;
                     width: 100px;
                     height: 40px;
-                    background-color: orange;
+                    background-color: var(--button-background-orange);
                     border-radius: 5px;
                     color: white;
                     font-size: 15px;
-                    font-weight: var(--font-weight-medium);
+                    font-weight: var(--font-weight-bold);
                     cursor: pointer;
-
+                }
+                .btn-1:hover{
+                    transform: scale(1.1,1.1);
                 }
                 .receipt{
                     width: 100%;
                     max-width: 500px;
-                   min-height: 700px;
+                    min-height: 670px;
                     background-color: white;
                     /* background-color: rgb(178, 176, 176); */
                    /*  position: absolute;
@@ -276,18 +288,17 @@ main{
                     h1{
                         margin: 20px 0 10px 30px;
                         font-size: 26px;
-    
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
                     }
                 }
                 .term{
                     width: 100%;
-                    height: 25%;
+                    height: 350px;
                     overflow: scroll;
                 }
                 .term::-webkit-scrollbar{
                     width: 0;
-                }
+                } 
                 .customer-name{
                     display: flex;
                     justify-content: space-between;
@@ -295,13 +306,13 @@ main{
                     h2{
                         font-size: 23px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -312,13 +323,13 @@ main{
                     h2{
                         font-size: 23px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -329,13 +340,13 @@ main{
                     h2{
                         font-size: 23px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -351,13 +362,13 @@ main{
                     h2{
                         font-size: 19px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -368,13 +379,13 @@ main{
                     h2{
                         font-size: 23px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                     p{
                         font-size: 15px;
     
-                        font-weight: var(--font-weight-medium);
+                        font-weight: var(--font-weight-bold);
 
                     }
                 }
@@ -384,16 +395,19 @@ main{
                         background: 0;
                         width: 150px;
                         height: 40px;
-                        background-color: orange;
+                        background-color: var(--button-background-orange);
                         border-radius: 5px;
                         color: white;
                         font-size: 15px;
-                        margin: 60px 0 0 110px;
+                        margin: 20px 0 0 35%;
                         font-weight: bold;
                         a{
                             text-decoration: none;
                             color: white;
                         }
+                }
+                button:hover{
+                    transform: scale(1.1,1.1);
                 }
 
             }
@@ -404,7 +418,7 @@ main{
 }
 .overlay {
   display: none;  
-  place-content: cen;
+  place-content: center;
   position: fixed;
   top: 0;
   left: 0;
@@ -414,7 +428,33 @@ main{
   /* z-index: 999; */
   justify-content: center;
   align-items: center;
+  opacity: 0;
 }
+.overlay.showme{
+    display: flex;
+    opacity: 1;
+}
+.message{
+    position: fixed;
+    background-color: var(--button-background-orange);
+    padding: 15px;
+    top: 3%;
+    width: 30%;
+    left: 60%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: var(--font-weight-bold);
+    color: white;
+    border-radius: var(--border-radius-md);
+    transition: all 0.5s linear;
+    transform: translateX(530px);
+    opacity: 0;
+}
+.message.showmessage{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
 
 
 .icon-place{
@@ -543,7 +583,7 @@ main{
                         }
                         .price p{
                             font-weight: var(--font-weight-medium);
-                            color: orange;
+                            color: var(--button-background-orange);
                             font-size: 17px;
         
                         }
@@ -566,6 +606,7 @@ main{
                 }
                 .left{
                     flex: 1;
+                    margin-top: 10px;
                     .payment{
                         width: 95%;
                         height: 99%;
@@ -597,7 +638,7 @@ main{
                                 background: 0;
                                 width: 100%;
                                 height: 40px;
-                                background-color: black;
+                                background-color: var(--color-primary);
                                 border-radius: 5px;
                                 color: white;
                                 font-size: 15px;
@@ -608,6 +649,9 @@ main{
                                     color: white;
                                 }
                             }
+                            .btn-2:hover{
+                                transform: scale(1.1,1.1);
+                            }
                         }    
                     }
                     .btn-1{
@@ -617,7 +661,7 @@ main{
                         background: 0;
                         width: 90%;
                         height: 40px;
-                        background-color: orange;
+                        background-color: var(--button-background-orange);
                         border-radius: 5px;
                         color: white;
                         font-size: 15px;
@@ -625,24 +669,29 @@ main{
     
                         cursor: pointer;
                     }
+                    .btn-1:hover{
+                        transform: scale(1.1,1.1);
+                    }
                     .receipt{
                         max-width: 360px;
                         min-height: 700px;
+                        min-height: 570px;
+                        padding: 0 0 20px 0;
                         /* width: 18rem;
                         height: 90%; 
                         background-color: white;
                         position: absolute;
                         top: 7%;
-                        left:  40%;
+                        left:  40%;*/
                         h1{
                             margin: 20px 0 10px 30px;
                             font-size: 26px;
         
-                            font-weight: var(--font-weight-medium); */
+                            font-weight: var(--font-weight-medium);
                         }
                         .term{
                             width: 100%;
-                            height: 25%;
+                            height: 350px;
                             overflow: scroll;
                         }
                         .term::-webkit-scrollbar{
@@ -738,11 +787,11 @@ main{
                         background: 0;
                         width: 150px;
                         height: 40px;
-                        background-color: orange;
+                        background-color: var(--button-background-orange);
                         border-radius: 5px;
                         color: white;
                         font-size: 15px;
-                        margin: 60px 0 0 110px;
+                        margin: 0 0 0 28%;
                         font-weight: var(--font-weight-medium);
     
                         a{
@@ -751,10 +800,11 @@ main{
                         }
                     }
 
-                }
+                
             }    
         } 
     }
+}
 } 
 
 @media  screen and (max-width: 490px) and (max-height: 932px){
@@ -858,7 +908,7 @@ main{
                     .material-symbols-light--menu-rounded{
                         width: 30px;
                         height: 30px;
-                        color: #EA6D27;
+                        color: var(--button-background-orange);
                     }
                 }
                 .icon-place{

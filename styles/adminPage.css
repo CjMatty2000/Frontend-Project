@@ -407,3 +407,9 @@ max-height: 100vh;
   #save-edit-btn:hover,#cancel-edit-btn:hover{
     background-color: var(--button-background-darkblue);
  }
+a:visited{
+  color: var(--button-background-orange);
+}
+a.active{
+  transform: scale(1.50,1.50);
+}

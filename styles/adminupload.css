@@ -195,7 +195,7 @@ body {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 10;
-   opacity: 0;
+  opacity: 0;
   visibility: hidden; 
   pointer-events: none; 
   transition: all 0.3s ease-in-out;
@@ -274,7 +274,7 @@ body {
   justify-content: center;
   align-items: center;
   max-width: 60%; 
-   min-height: 30%;
+   min-height: 45%;
   margin: 0 auto; 
   text-align: left;
    padding: 10px;
@@ -302,7 +302,7 @@ body {
   cursor: pointer;
 }
 #save-product{
-    margin: 1.3rem auto 0 auto;
+    margin: 0 auto 25px auto;
     width:15%;
     outline: none;
     border: none;
@@ -434,5 +434,11 @@ body {
     text-align: center;
     margin-top: 1rem;
     color: var(--Hero-page-backgroundcolor1);
+}
+a:visited{
+  color: var(--button-background-orange);
+}
+a.active{
+  transform: scale(1.50,1.50);
 }
 

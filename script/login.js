@@ -2,6 +2,36 @@ const form = document.getElementById('loginForm');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 
+
+const togglePasswordBtns = document.querySelectorAll('.toggle-password');
+
+togglePasswordBtns.forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        
+        const targetId = this.getAttribute('data-target');
+        const passwordInput = document.getElementById(targetId);
+        const icon = this.querySelector('i');
+        
+        // Toggle password visibility
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            icon.classList.remove('fa-eye');
+            icon.classList.add('fa-eye-slash');
+            this.classList.add('active');
+        } else {
+            passwordInput.type = 'password';
+            icon.classList.remove('fa-eye-slash');
+            icon.classList.add('fa-eye');
+            this.classList.remove('active');
+        }
+        
+        // Keep focus on the input
+        passwordInput.focus();
+    });
+});
+
 form.addEventListener('submit', e => {
   e.preventDefault();
 
@@ -18,7 +48,7 @@ form.addEventListener('submit', e => {
 
     if (emailValue === storedUser.email && passwordValue === storedUser.password) {
       alert('Login successful!');
-      window.location.href = "https://www.dsm-firmenich.com/en/businesses/taste-texture-health.html";
+      window.location.href = "/pages/order.html";
     } else {
       alert('Invalid email or password. Please try again.');
     }

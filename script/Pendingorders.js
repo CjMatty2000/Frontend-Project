@@ -17,7 +17,12 @@ console.log("Parent:", parent);
 
 
 function Display(){
-     overlay.style.display = "block"
+     setTimeout(() => {
+        overlay.classList.add("showme")
+        overlay.addEventListener("click",() => {
+            overlay.classList.remove("showme")
+        })
+     },100)
 }
 
 let cart = [];

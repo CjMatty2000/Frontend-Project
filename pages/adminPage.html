@@ -16,14 +16,14 @@
       <span>
         <img src="../assests/icon/favicon.svg" alt="Restaurant logo">
       </span>
-      <iconify-icon icon="ion:home" width="24" height="24" style="color:#EA6D27;"></iconify-icon>
-      <iconify-icon icon="mage:dots-menu" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="material-symbols-light:list-alt-rounded" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="streamline:burger-solid" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="ix:alarm-bell-filled" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="bitcoin-icons:contacts-filled" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="famicons:send-sharp" width="24" height="24"></iconify-icon>
-      <iconify-icon icon="weui:setting-filled" width="24" height="24"></iconify-icon>
+      <a href="/class.html"><iconify-icon icon="ion:home" width="24" height="24" style = "color:#EA6D27 ;" id="picture"></iconify-icon></a>
+                <a href="/pages/adminPage.html"><iconify-icon icon="mage:dots-menu" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href="/pages/Pendingorders.html"><iconify-icon icon="material-symbols-light:list-alt-rounded" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href="/pages/order.html"><iconify-icon icon="streamline:burger-solid" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href="/pages/login.html"><iconify-icon icon="ix:alarm-bell-filled" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href=""><iconify-icon icon="bitcoin-icons:contacts-filled" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href=""><iconify-icon icon="famicons:send-sharp" width="24" height="24" id="picture"></iconify-icon></a>
+                <a href=""><iconify-icon icon="weui:setting-filled" width="24" height="24" id="picture"></iconify-icon></a>
     </section>
 
     <div class="admin-container">
@@ -37,6 +37,7 @@
           <thead>
             <tr>
               <th>Product</th>
+              <th>Quantity</th>
               <th>Status</th>
               <th>ID</th>
               <th>Price</th>
@@ -96,6 +97,13 @@
                 <div class="input-field">
                     <label for="edit-product-price">Price:</label>
                     <input type="number" id="edit-product-price" name="edit-product-price" placeholder="₦0.00">
+                </div>
+
+
+                  <!-- the quantity section -->
+                <div class="input-field">
+                    <label for="edit-product-qauntity">qauntity:</label>
+                    <input type="number" id="edit-product-qauntity" name="edit-product-qauntity" placeholder="12345">
                 </div>
         </div>
 
